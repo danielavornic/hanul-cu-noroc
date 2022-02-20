@@ -169,7 +169,11 @@ nav > .row {
 }
 
 @media screen and (max-width: 991px) {
-  .nav-item:not {
+  .menu-center img {
+    margin: 0 54px;
+  }
+
+  .nav-item {
     margin: 0 14px;
   }
 
@@ -201,7 +205,7 @@ nav > .row {
 
   .menu {
     position: absolute;
-    top: 78px;
+    top: 79px;
     left: 0;
     padding: 36px 0;
     width: 100%;
