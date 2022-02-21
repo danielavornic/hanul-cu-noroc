@@ -77,8 +77,11 @@ nav > .row {
 }
 
 .menu-center img, .menu-logo img {
-  margin: 0 60px;
   transition: opacity ease-in 0.3s;
+}
+
+.menu-center img {
+  margin: 0 60px;
 }
 
 .menu-center img:hover, .menu-logo img:hover {
