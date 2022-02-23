@@ -10,5 +10,5 @@ $(function () {
   hideMenu();
   $(window).on('resize', hideMenu);
 
-  $('#toggler').click(() => $('.menu').slideToggle());
+  $('#toggler').click(() => $('.menu').animate({width:'toggle'}));
 });
