@@ -10,9 +10,10 @@
 
 @font-face {
   font-family: 'Butler';
-  src: url('../fonts/Butler_Light.otf');
-  src: url('../fonts/Butler_Light.woff') format('woff'),
-    url('../fonts/Butler_Light.otf') format('opentype');
+  src: url('../fonts/Butler.otf');
+  src: url('../fonts/Butler.woff') format('woff'),
+      url('../fonts/Butler.woff2') format('woff2'),
+      url('../fonts/Butler.otf') format('opentype');
 }
 
 html {
