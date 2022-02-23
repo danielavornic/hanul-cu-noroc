@@ -52,6 +52,9 @@ a:hover::after {
 
 /* header */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   border-bottom: 1px solid var(--black);
   padding: 12px 0;
 }
@@ -203,16 +206,17 @@ nav > .row {
   }
 
   .menu {
-    position: absolute;
+    position: fixed;
     top: 80px;
-    left: 0;
+    width: 45%;
+    right: 0px;
+    height: calc(100vh - 153px);
     padding: 36px 0;
-    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     background: #fff;
-    border-bottom: 1px solid #f9f9f9;
+    border-left: 1px solid #f9f9f9;
   }
 
   .menu-right,
