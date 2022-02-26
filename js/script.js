@@ -1,6 +1,7 @@
 $(function () {
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
+  const hero = $('#hero');
 
   $(window).on('resize', () => {
     if (window.matchMedia('min-width: 768px').matches)
@@ -13,5 +14,6 @@ $(function () {
     });
     menu.toggleClass('hidden');
     menuIcon.toggleClass('active');
+    hero.toggleClass('blurred');
   });
 });
