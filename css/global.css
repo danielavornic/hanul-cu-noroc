@@ -120,28 +120,17 @@ nav > .row {
   font-family: 'Butler', serif;
 }
 
-#toggler {
-  position: absolute;
-  top: 22px;
-  right: 12px;
-  width: 32px;
-  height: 32px;
-  opacity: 0;
-  z-index: 2;
-  cursor: pointer;
-  display: none;
-}
-
-.hamburger-icon {
+#menu-icon {
   width: 32px;
   height: 32px;
   position: relative;
   display: none;
   float: right;
+  cursor: pointer;
 }
 
-.hamburger-icon::before,
-.hamburger-icon::after {
+#menu-icon::before,
+#menu-icon::after {
   content: '';
   width: 100%;
   height: 1px;
@@ -152,26 +141,22 @@ nav > .row {
   transform-origin: 50%;
 }
 
-.hamburger-icon::before {
+#menu-icon::before {
   top: calc(50% - 6px);
 }
 
-.hamburger-icon::after {
+#menu-icon::after {
   bottom: calc(50% - 6px);
 }
 
-#toggler:checked + .hamburger-icon::before {
+#menu-icon.active::before {
   top: 50%;
   transform: rotate(-45deg) translateY(-50%);
 }
 
-#toggler:checked + .hamburger-icon::after {
+#menu-icon.active::after {
   bottom: 50%;
   transform: rotate(45deg) translateY(-50%);
-}
-
-#toggler:checked ~ .menu {
-  display: flex;
 }
 
 /* media queries */
@@ -206,16 +191,12 @@ nav > .row {
   
   .menu-logo,
   #toggler,
-  .hamburger-icon {
+  #menu-icon {
     display: block;
   }
 
-  .hamburger-icon::before, .hamburger-icon::after {
+  #menu-icon::before, #menu-icon::after {
     background-color: var(--black);
-  }
-
-  .menu-center {
-    display: none;
   }
 
   .menu {
@@ -230,6 +211,10 @@ nav > .row {
     align-items: flex-start;
     border-left: 1px solid #f9f9f9;
     background:  white;
+  }
+
+  .menu-center {
+    display: none;
   }
 
   .menu-right,
@@ -248,6 +233,7 @@ nav > .row {
 
   .nav-item a {
     color: var(--black);
+    font-size: 18px;
   }
 
   .nav-item a::after {

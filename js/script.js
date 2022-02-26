@@ -2,7 +2,7 @@ $(function () {
   const hideMenu = () => {
     if (
       window.matchMedia('(max-width: 768px)').matches &&
-      !$('#toggler').is(':checked')
+      !$('#menu-icon').hasClass('active')
     )
       $('.menu').hide();
     else $('.menu').show();
@@ -10,5 +10,8 @@ $(function () {
   hideMenu();
   $(window).on('resize', hideMenu);
 
-  $('#toggler').click(() => $('.menu').animate({width:'toggle'}, 250));
+  $('#menu-icon').click(() => {
+    $('#menu-icon').toggleClass('active');
+    $('.menu').animate({ width: 'toggle' }, 250);
+  });
 });
