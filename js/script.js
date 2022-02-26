@@ -1,11 +1,19 @@
 $(function () {
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
-  const hero = $('#hero');
 
   $(window).on('resize', () => {
-    if (window.matchMedia('min-width: 768px').matches)
+    if (window.matchMedia('(min-width: 769px)').matches) {
       menu.css('margin-right', 0);
+      $('.blurred').removeClass('blurred');
+    } else {
+      if (menu.hasClass('hidden')) {
+        menu.css('margin-right', '-100%');
+        $('.blurred').removeClass('blurred');
+      } else {
+        $('body > *').not('body > header').addClass('blurred');
+      }
+    }
   });
 
   menuIcon.click(() => {
@@ -14,6 +22,6 @@ $(function () {
     });
     menu.toggleClass('hidden');
     menuIcon.toggleClass('active');
-    hero.toggleClass('blurred');
+    $('body > *').not('body > header').toggleClass('blurred');
   });
 });
