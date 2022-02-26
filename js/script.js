@@ -1,17 +1,17 @@
 $(function () {
-  const hideMenu = () => {
-    if (
-      window.matchMedia('(max-width: 768px)').matches &&
-      !$('#menu-icon').hasClass('active')
-    )
-      $('.menu').hide();
-    else $('.menu').show();
-  };
-  hideMenu();
-  $(window).on('resize', hideMenu);
+  const menu = $('#menu');
+  const menuIcon = $('#menu-icon');
 
-  $('#menu-icon').click(() => {
-    $('#menu-icon').toggleClass('active');
-    $('.menu').animate({ width: 'toggle' }, 250);
+  $(window).on('resize', () => {
+    if (window.matchMedia('min-width: 768px').matches)
+      menu.css('margin-right', 0);
+  });
+
+  menuIcon.click(() => {
+    menu.animate({
+      'margin-right': menu.hasClass('hidden') ? '0' : '-100%',
+    });
+    menu.toggleClass('hidden');
+    menuIcon.toggleClass('active');
   });
 });

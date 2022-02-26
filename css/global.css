@@ -10,12 +10,14 @@
 
 @font-face {
   font-family: 'Butler';
-  src: url('../fonts/Butler.otf');
-  src: url('../fonts/Butler.woff') format('woff'),
-      url('../fonts/Butler.woff2') format('woff2'),
-      url('../fonts/Butler.otf') format('opentype');
+  src: url('../fonts/Butler.eot?#iefix') format('embedded-opentype'),  
+    url('../fonts/Butler.otf') format('opentype'),
+    url('../fonts/Butler.ttf') format('truetype'),
+    url('../fonts/Butler.woff') format('woff'),
+    url('../fonts/Butler.svg') format('svg');
 }
 
+/* general styling */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -25,20 +27,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Butler', serif;
-}
-
 a {
   text-decoration: none;
 }
 
-a::after {
+a:not(.btn)::after {
   content: '';
   background: white;
   width: 0;
@@ -47,13 +40,52 @@ a::after {
   transition: 0.2s;
 }
 
-a:hover::after {
+a:not(.btn):hover::after {
   width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+.subheading {
+  font-family: 'Butler', serif;
+  font-weight: 500;
+}
+
+.subheading {
+  font-size: 32px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 18px 48px;
+	text-transform: uppercase;
+  transition: 0.3s ease-out;
+}
+
+.btn-white {
+	color: var(--dark-green);
+  background: linear-gradient(to left, white 50%, var(--dark-green) 50%) right;
+  background-size: 200%;
+}
+
+.btn-white:hover {
+	color: white;
+  background-position: left;
+}
+
+.btn-transparent {
+  color: white;
+  background: transparent;
+	border: 1px solid white;
+}
+
+.btn-transparent:hover {
+  background: white;
+	color: var(--dark-green);
 }
 
 /* header */
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   border-bottom: 1px solid white;
@@ -67,7 +99,7 @@ nav > .row {
   align-items: center;
 }
 
-.menu {
+#menu {
   display: flex;
   justify-content: center;
   background: transparent;
@@ -83,7 +115,8 @@ nav > .row {
   display: flex;
 }
 
-.menu-center img, .menu-logo img {
+.menu-center img,
+.menu-logo img {
   transition: opacity ease-in 0.3s;
 }
 
@@ -91,11 +124,14 @@ nav > .row {
   margin: 0 60px;
 }
 
-.menu-center img:hover, .menu-logo img:hover {
+.menu-center img:hover,
+.menu-logo img:hover {
   opacity: 0.8;
 }
 
-.menu-center a::after, .menu-logo a::after, .menu-logo {
+.menu-center a::after,
+.menu-logo a::after,
+.menu-logo {
   display: none;
 }
 
@@ -186,31 +222,38 @@ nav > .row {
 
 @media screen and (max-width: 768px) {
   header {
+    position: fixed;
     background-color: white;
+    border-bottom: 1px solid #f9f9f9;
   }
-  
+
   .menu-logo,
   #toggler,
   #menu-icon {
     display: block;
   }
 
-  #menu-icon::before, #menu-icon::after {
+  #menu-icon::before,
+  #menu-icon::after {
     background-color: var(--black);
   }
 
-  .menu {
+  #menu {
     position: fixed;
     top: 78px;
     width: 50%;
-    right: 0px;
+    right: 0;
     height: calc(100vh - 151px);
     padding: 36px 28px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     border-left: 1px solid #f9f9f9;
-    background:  white;
+    background: white;
+  }
+
+  #menu.hidden {
+    margin-right: -100%;
   }
 
   .menu-center {
