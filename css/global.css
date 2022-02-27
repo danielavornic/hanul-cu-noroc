@@ -243,6 +243,13 @@ nav > .row {
 }
 
 /* media queries */
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 36px;
+  }
+}
+
+
 @media screen and (max-width: 991px) {
   .menu-center img {
     margin: 0 54px;
