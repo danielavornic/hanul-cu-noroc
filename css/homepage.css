@@ -47,6 +47,12 @@ h1 {
 }
 
 /* about section */
+#about {
+  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
+  background-attachment: fixed;
+  background-repeat: space;
+}
+
 .about-images {
   display: flex;
   justify-content: flex-start;
@@ -72,6 +78,61 @@ h1 {
 
 #about .btn {
   margin-top: 1.5rem;
+}
+
+/* services section */
+#services {
+  background-color: var(--beige);
+}
+
+#services h2, #services .subheading-2 {
+  text-align: center;
+}
+
+#services h2 {
+  margin-bottom: 96px;
+}
+
+.service-box {
+  padding: 48px;
+  border: 1px solid var(--light-gray);
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  box-shadow: 0 0 14px rgb(0 0 0 / 2%);
+  transform: translateY(-6px) !important;
+}
+
+.service-box a {
+  color: unset;
+}
+
+.service-heading {
+  display: flex;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.service-heading *, .service-description p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.service-heading h3 {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.service-heading i {
+  font-size: 42px;
+  color: var(--green);
+  margin-right: 24px;
+}
+
+.service-description p {
+  padding-top: 24px;
 }
 
 /* animation for background images of hero section */
@@ -224,6 +285,10 @@ h1 {
   .about-images .img-container {
     width: 200px;
   }
+
+  #services h2 {
+    margin-bottom: 72px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -234,6 +299,10 @@ h1 {
 
   .about-images .img-container:nth-child(2) {
     display: none;
+  }
+  
+  .service-box {
+    margin-bottom: 24px;
   }
 }
 
@@ -273,6 +342,10 @@ h1 {
   .main-btns .btn-white {
     margin-right: 0;
     margin-bottom: 18px;
+  }
+
+  #services h2 {
+    margin-bottom: 64px;
   }
 }
 
