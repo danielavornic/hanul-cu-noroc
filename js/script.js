@@ -1,4 +1,6 @@
 $(function () {
+  $("#loading").fadeOut(300);
+
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
   const menuLogo = $('header .menu-center img').first();

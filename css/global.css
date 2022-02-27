@@ -130,6 +130,23 @@ section:not(#hero) {
 	filter: blur(4px);
 }
 
+/* loader */
+#loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#loading img {
+  width: 400px;
+  height: auto;
+}
+
 /* header */
 header {
   position: fixed;
