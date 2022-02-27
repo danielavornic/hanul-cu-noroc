@@ -1,6 +1,9 @@
 $(function () {
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
+  const menuLogo = $('header .menu-center img').first();
+  const header = $('header').first();
+  let prevSt = 0;
 
   const toggleMenu = () => {
     menu.animate({
@@ -25,8 +28,24 @@ $(function () {
     }
   };
 
+  const toggleNavOnScroll = () => {
+    if (window.matchMedia('(min-width: 769px)').matches) {
+      let st = $(this).scrollTop();
+      if (st <= 0 || st > prevSt) {
+        header.removeClass('sticky');
+        menuLogo.attr('src', '../images/logo-white.png');
+        if (st > prevSt) header.addClass('hidden');
+      } else {
+        header.removeClass('hidden').addClass('sticky');
+        menuLogo.attr('src', '../images/logo.png');
+      }
+      prevSt = st;
+    }
+  };
+
   menuIcon.click(toggleMenu);
   $(window).on('resize', toggleMenuOnResize);
+  $(window).scroll(toggleNavOnScroll);
 
   AOS.init();
 });

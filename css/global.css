@@ -132,13 +132,24 @@ section:not(#hero) {
 
 /* header */
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   border-bottom: 1px solid white;
   padding: 12px 0;
   z-index: 2;
   background-color: transparent;
+  transition: 0.3s;
+}
+
+header.hidden {
+  top: -78px;
+}
+
+header.sticky {
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid var(--light-gray);
 }
 
 nav > .row {
@@ -203,6 +214,14 @@ nav > .row {
   font-family: 'Butler', serif;
 }
 
+header.sticky .nav-item a {
+  color: var(--black);
+}
+
+header.sticky .nav-item a::after {
+  background-color: var(--black);
+}
+
 #menu-icon {
   width: 32px;
   height: 32px;
@@ -249,7 +268,6 @@ nav > .row {
   }
 }
 
-
 @media screen and (max-width: 991px) {
   .menu-center img {
     margin: 0 54px;
@@ -280,7 +298,6 @@ nav > .row {
   }
 
   header {
-    position: fixed;
     background-color: white;
     border-bottom: 1px solid var(--light-gray);
   }
