@@ -2,7 +2,16 @@ $(function () {
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
 
-  $(window).on('resize', () => {
+  const toggleMenu = () => {
+    menu.animate({
+      'margin-right': menu.hasClass('hidden') ? '0' : '-100%',
+    });
+    menu.toggleClass('hidden');
+    menuIcon.toggleClass('active');
+    $('body > *').not('body > header').toggleClass('blurred');
+  };
+
+  const toggleMenuOnResize = () => {
     if (window.matchMedia('(min-width: 769px)').matches) {
       menu.css('margin-right', 0);
       $('.blurred').removeClass('blurred');
@@ -14,14 +23,10 @@ $(function () {
         $('body > *').not('body > header').addClass('blurred');
       }
     }
-  });
+  };
 
-  menuIcon.click(() => {
-    menu.animate({
-      'margin-right': menu.hasClass('hidden') ? '0' : '-100%',
-    });
-    menu.toggleClass('hidden');
-    menuIcon.toggleClass('active');
-    $('body > *').not('body > header').toggleClass('blurred');
-  });
+  menuIcon.click(toggleMenu);
+  $(window).on('resize', toggleMenuOnResize);
+
+  AOS.init();
 });

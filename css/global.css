@@ -50,14 +50,45 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500;
 }
 
+h2 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+section:not(#hero) {
+  padding: 120px 0;
+}
+
 .subheading {
   font-size: 32px;
+}
+
+.subheading-2 {
+  color: var(--dark-green);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.subheading-2::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 2px;
+  margin-right: 20px;
+  background-color: var(--dark-green);
 }
 
 .btn {
 	display: inline-block;
 	padding: 18px 48px;
 	text-transform: uppercase;
+  text-align: center;
   transition: 0.3s ease-out;
 }
 
@@ -72,15 +103,27 @@ h1, h2, h3, h4, h5, h6,
   background-position: left;
 }
 
-.btn-transparent {
+.btn-white-transparent {
   color: white;
   background: transparent;
 	border: 1px solid white;
 }
 
-.btn-transparent:hover {
+.btn-white-transparent:hover {
   background: white;
 	color: var(--dark-green);
+}
+
+.btn-green-transparent {
+  color: var(--dark-green);
+  background: linear-gradient(to left, transparent 50%, var(--dark-green) 50%) right;
+	border: 1px solid var(--dark-green);
+  background-size: 200%;
+}
+
+.btn-green-transparent:hover {
+  background-position: left;
+	color: white;
 }
 
 .blurred {
@@ -225,10 +268,14 @@ nav > .row {
 }
 
 @media screen and (max-width: 768px) {
+  section:not(#hero) {
+    padding: 90px 0;
+  }
+
   header {
     position: fixed;
     background-color: white;
-    border-bottom: 1px solid #f9f9f9;
+    border-bottom: 1px solid var(--light-gray);
   }
 
   .menu-logo,
