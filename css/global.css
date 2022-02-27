@@ -3,6 +3,7 @@
   --dark-green: #1b5232;
   --mineral-green: #436063;
   --light-gray: #d1d7d5;
+  --gray: #7c7c7c;
   --beige: #f1efe2;
   --snow: #f4f4f4;
   --black: #1b1b1b;
@@ -31,20 +32,7 @@ a {
   text-decoration: none;
 }
 
-a:not(.btn)::after {
-  content: '';
-  background: white;
-  width: 0;
-  height: 0.5px;
-  display: block;
-  transition: 0.2s;
-}
-
-a:not(.btn):hover::after {
-  width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6,
+h1, h2,
 .subheading {
   font-family: 'Butler', serif;
   font-weight: 500;
@@ -60,7 +48,7 @@ p {
 }
 
 section:not(#hero) {
-  padding: 120px 0;
+  padding: 140px 0;
 }
 
 .subheading {
@@ -72,9 +60,10 @@ section:not(#hero) {
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 0;
+  margin-bottom: 28px;
 }
 
-.subheading-2::before {
+.subheading-2.left-dash::before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -84,9 +73,15 @@ section:not(#hero) {
   background-color: var(--dark-green);
 }
 
+.small-text {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 24px;
+}
+
 .btn {
 	display: inline-block;
-	padding: 18px 48px;
+	padding: 16px 48px;
 	text-transform: uppercase;
   text-align: center;
   transition: 0.3s ease-out;
@@ -166,7 +161,7 @@ header.hidden {
 header.sticky {
   top: 0;
   background-color: white;
-  border-bottom: 1px solid var(--light-gray);
+  box-shadow: 0 3px 14px rgb(0 0 0 / 3%);
 }
 
 nav > .row {
@@ -229,6 +224,19 @@ nav > .row {
 .nav-item a {
   color: white;
   font-family: 'Butler', serif;
+}
+
+.nav-item a::after {
+  content: '';
+  background: white;
+  width: 0;
+  height: 0.5px;
+  display: block;
+  transition: 0.2s;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
 }
 
 header.sticky .nav-item a {
