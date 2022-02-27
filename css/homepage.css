@@ -14,9 +14,12 @@
 	background-image: url('../images/hero-bg-1.jpg');
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-	-ms-transform: translate3d(0, 0, 0);;
 	backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
+  -webkit-animation: heroBgAnimation 24s ease-in-out infinite 0s;
+  -moz-animation: heroBgAnimation 24s ease-in-out infinite 0s;
+  -o-animation: heroBgAnimation 24s ease-in-out infinite 0s;
+  -ms-animation: heroBgAnimation 24s ease-in-out infinite 0s;
   animation: heroBgAnimation 24s ease-in-out infinite 0s;
 }
 
@@ -44,10 +47,6 @@ h1 {
 }
 
 /* about section */
-#about .btn {
-  margin-top: 1.5rem;
-}
-
 .about-images {
   display: flex;
   justify-content: flex-start;
@@ -69,6 +68,115 @@ h1 {
 
 .about-images .img-container:nth-child(2) {
   align-self: flex-end;
+}
+
+#about .btn {
+  margin-top: 1.5rem;
+}
+
+/* animation for background images of hero section */
+@-webkit-keyframes heroBgAnimation {
+  0%,
+  12% {
+    background-image: url('../images/hero-bg-1.jpg'),
+      url('../images/hero-bg-2.jpg');
+  }
+  25%,
+  37% {
+    background-image: url('../images/hero-bg-2.jpg'),
+      url('../images/hero-bg-3.jpg');
+  }
+  50%,
+  62% {
+    background-image: url('../images/hero-bg-3.jpg'),
+      url('../images/hero-bg-4.jpg');
+  }
+  75%,
+  87% {
+    background-image: url('../images/hero-bg-4.jpg'),
+      url('../images/hero-bg-1.jpg');
+  }
+  100% {
+    background-image: url('../images/hero-bg-1.jpg');
+  }
+}
+
+@-moz-keyframes heroBgAnimation {
+  0%,
+  12% {
+    background-image: url('../images/hero-bg-1.jpg'),
+      url('../images/hero-bg-2.jpg');
+  }
+  25%,
+  37% {
+    background-image: url('../images/hero-bg-2.jpg'),
+      url('../images/hero-bg-3.jpg');
+  }
+  50%,
+  62% {
+    background-image: url('../images/hero-bg-3.jpg'),
+      url('../images/hero-bg-4.jpg');
+  }
+  75%,
+  87% {
+    background-image: url('../images/hero-bg-4.jpg'),
+      url('../images/hero-bg-1.jpg');
+  }
+  100% {
+    background-image: url('../images/hero-bg-1.jpg');
+  }
+}
+
+@-o-keyframes heroBgAnimation {
+  0%,
+  12% {
+    background-image: url('../images/hero-bg-1.jpg'),
+      url('../images/hero-bg-2.jpg');
+  }
+  25%,
+  37% {
+    background-image: url('../images/hero-bg-2.jpg'),
+      url('../images/hero-bg-3.jpg');
+  }
+  50%,
+  62% {
+    background-image: url('../images/hero-bg-3.jpg'),
+      url('../images/hero-bg-4.jpg');
+  }
+  75%,
+  87% {
+    background-image: url('../images/hero-bg-4.jpg'),
+      url('../images/hero-bg-1.jpg');
+  }
+  100% {
+    background-image: url('../images/hero-bg-1.jpg');
+  }
+}
+
+@-ms-keyframes heroBgAnimation {
+  0%,
+  12% {
+    background-image: url('../images/hero-bg-1.jpg'),
+      url('../images/hero-bg-2.jpg');
+  }
+  25%,
+  37% {
+    background-image: url('../images/hero-bg-2.jpg'),
+      url('../images/hero-bg-3.jpg');
+  }
+  50%,
+  62% {
+    background-image: url('../images/hero-bg-3.jpg'),
+      url('../images/hero-bg-4.jpg');
+  }
+  75%,
+  87% {
+    background-image: url('../images/hero-bg-4.jpg'),
+      url('../images/hero-bg-1.jpg');
+  }
+  100% {
+    background-image: url('../images/hero-bg-1.jpg');
+  }
 }
 
 @keyframes heroBgAnimation {
@@ -172,7 +280,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .about-images {
     flex-direction: column;
   }
