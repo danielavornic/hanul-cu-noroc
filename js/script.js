@@ -33,11 +33,11 @@ $(function () {
       let st = $(this).scrollTop();
       if (st <= 0 || st > prevSt) {
         header.removeClass('sticky');
-        menuLogo.attr('src', '../images/logo-white.png');
+        menuLogo.attr('src', '../images/logos/logo-white.png');
         if (st > prevSt) header.addClass('hidden');
       } else {
         header.removeClass('hidden').addClass('sticky');
-        menuLogo.attr('src', '../images/logo.png');
+        menuLogo.attr('src', '../images/logos/logo.png');
       }
       prevSt = st;
     }
