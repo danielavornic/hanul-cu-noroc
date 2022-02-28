@@ -26,6 +26,23 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--green); 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green); 
 }
 
 a {
