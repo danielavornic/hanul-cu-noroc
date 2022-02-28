@@ -125,6 +125,18 @@ section:not(#hero) {
 	filter: blur(4px);
 }
 
+.section-heading {
+  margin-bottom: 96px;
+}
+
+.section-heading.less-mb {
+  margin-bottom: 48px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
 /* loader */
 #loading {
   position: fixed;
@@ -161,7 +173,7 @@ header.hidden {
 header.sticky {
   top: 0;
   background-color: white;
-  box-shadow: 0 3px 14px rgb(0 0 0 / 3%);
+  box-shadow: 0 3px 14px rgb(0 0 0 / 4%);
 }
 
 nav > .row {
@@ -291,6 +303,10 @@ header.sticky .nav-item a::after {
   h2 {
     font-size: 36px;
   }
+
+  .section-heading {
+    margin-bottom: 72px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -320,6 +336,10 @@ header.sticky .nav-item a::after {
 @media screen and (max-width: 768px) {
   section:not(#hero) {
     padding: 90px 0;
+  }
+
+  .section-heading.less-mb {
+    margin-bottom: 36px;
   }
 
   header {
@@ -381,5 +401,11 @@ header.sticky .nav-item a::after {
 
   .nav-item a::after {
     background-color: var(--black);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section-heading {
+    margin-bottom: 64px;
   }
 }

@@ -1,5 +1,5 @@
 $(function () {
-  $("#loading").fadeOut(300);
+  $('#loading').fadeOut(300);
 
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
@@ -8,10 +8,9 @@ $(function () {
   let prevSt = 0;
 
   const toggleMenu = () => {
-    menu.animate({
-      'margin-right': menu.hasClass('hidden') ? '0' : '-100%',
-    });
-    menu.toggleClass('hidden');
+    menu
+      .animate({ 'margin-right': menu.hasClass('hidden') ? '0' : '-100%' })
+      .toggleClass('hidden');
     menuIcon.toggleClass('active');
     $('body > *').not('body > header').toggleClass('blurred');
   };
@@ -48,6 +47,9 @@ $(function () {
   menuIcon.click(toggleMenu);
   $(window).on('resize', toggleMenuOnResize);
   $(window).scroll(toggleNavOnScroll);
+
+  if ($(window).scrollTop() > 0 && window.matchMedia('(min-width: 769px)').matches)
+    header.removeClass('sticky').addClass('hidden');
 
   AOS.init();
 });

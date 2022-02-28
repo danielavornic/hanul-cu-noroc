@@ -13,7 +13,13 @@
   background-attachment: fixed;
 	background-image: url('../images/hero-bg-1.jpg');
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   -webkit-animation: heroBgAnimation 24s ease-in-out infinite 0s;
@@ -89,10 +95,6 @@ h1 {
   text-align: center;
 }
 
-#services h2 {
-  margin-bottom: 96px;
-}
-
 .service-box {
   padding: 48px;
   border: 1px solid var(--light-gray);
@@ -133,6 +135,60 @@ h1 {
 
 .service-description p {
   padding-top: 24px;
+}
+
+/* gallery section */
+#gallery {
+  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
+  background-attachment: fixed;
+  background-repeat: space;
+}
+
+#slider {
+  position: relative;
+  display: flex;
+  width: fit-content;
+}
+
+.slide {
+  width: 600px;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.slide-content {
+  position: relative;
+  height: fit-content;
+  margin-right: 18px;
+}
+
+.slide-content img {
+  width: 100%;
+  display: block;
+}
+
+.slide-content .green-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-green);
+  z-index: 2;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slide-content:hover .green-overlay {
+  opacity: 0.5;
+}
+
+.transition {
+  transition: 0.7s;
+}
+
+#gallery .btn {
+  display: none;
 }
 
 /* animation for background images of hero section */
@@ -275,6 +331,10 @@ h1 {
   .about-images .img-container:nth-child(1) {
     margin-right: 36px;
   }
+
+  .slide {
+    width: 500px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -286,8 +346,8 @@ h1 {
     width: 200px;
   }
 
-  #services h2 {
-    margin-bottom: 72px;
+  .slide {
+    width: 400px;
   }
 }
 
@@ -303,6 +363,31 @@ h1 {
   
   .service-box {
     margin-bottom: 24px;
+  }
+
+  #slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .slide {
+    width: auto;
+  }
+
+  .slide-content {
+    margin-right: 0;
+  }
+
+  .slide-content img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  #gallery .btn {
+    display: block;
+    width: calc(100% - 98px);
+    margin-top: 36px;
   }
 }
 
@@ -344,8 +429,8 @@ h1 {
     margin-bottom: 18px;
   }
 
-  #services h2 {
-    margin-bottom: 64px;
+  #slider {
+    grid-template-columns: 1fr;
   }
 }
 
