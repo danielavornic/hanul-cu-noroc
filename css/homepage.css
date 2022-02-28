@@ -183,6 +183,60 @@ h1 {
   display: none;
 }
 
+/* video section */
+#video {
+  background-image: url('../images/video-bg.jpg');
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#video .green-overlay {
+  opacity: 0.6;
+  z-index: 0;
+}
+
+#video .video-icon-box {
+  z-index: 1;
+}
+
+#video .video-icon {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 var(--snow);
+  -webkit-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  -ms-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#video i {
+  color: var(--green);
+  font-size: 32px;
+  margin-left: 4px;
+  transition: 0.3s;
+}
+
+#video .video-icon:hover {
+  animation: none;
+}
+
+#video .video-icon:hover i {
+  color: var(--dark-green);
+}
+
 /* animation for background images of hero section */
 @-webkit-keyframes heroBgAnimation {
   0%,
@@ -209,7 +263,6 @@ h1 {
     background-image: url('../images/hero-bg-1.jpg');
   }
 }
-
 @-moz-keyframes heroBgAnimation {
   0%,
   12% {
@@ -235,7 +288,6 @@ h1 {
     background-image: url('../images/hero-bg-1.jpg');
   }
 }
-
 @-o-keyframes heroBgAnimation {
   0%,
   12% {
@@ -261,7 +313,6 @@ h1 {
     background-image: url('../images/hero-bg-1.jpg');
   }
 }
-
 @-ms-keyframes heroBgAnimation {
   0%,
   12% {
@@ -287,7 +338,6 @@ h1 {
     background-image: url('../images/hero-bg-1.jpg');
   }
 }
-
 @keyframes heroBgAnimation {
   0%,
   12% {
@@ -313,6 +363,13 @@ h1 {
     background-image: url('../images/hero-bg-1.jpg');
   }
 }
+
+/* animation for pulsting video button */
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
+@-o-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 
 /* media queries */
 @media screen and (max-width: 1400px) {
@@ -384,6 +441,10 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
+  #hero, #video {
+    background-attachment: scroll;
+  }
+
   .about-images {
     justify-content: center;
     margin-bottom: 36px;
