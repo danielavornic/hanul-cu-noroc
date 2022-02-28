@@ -19,7 +19,6 @@
     url('../fonts/Butler.svg') format('svg');
 }
 
-/* general styling */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -47,12 +46,14 @@ body::-webkit-scrollbar-thumb:hover {
   background: var(--dark-green); 
 }
 
+/* text */
 h1, h2, h3, h4, h5, h6 {
   color: var(--black);
 }
 
 a {
   text-decoration: none;
+  color: var(--black);
 }
 
 h1, h2,
@@ -70,8 +71,16 @@ p {
   line-height: 32px;
 }
 
-section:not(#hero) {
-  padding: 140px 0;
+.section-heading {
+  margin-bottom: 96px;
+}
+
+.section-heading.less-mb {
+  margin-bottom: 48px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
 }
 
 .subheading {
@@ -102,6 +111,7 @@ section:not(#hero) {
   line-height: 24px;
 }
 
+/* buttons */
 .btn {
 	display: inline-block;
 	padding: 16px 48px;
@@ -144,20 +154,13 @@ section:not(#hero) {
 	color: white;
 }
 
+/* other */
+section:not(#hero) {
+  padding: 140px 0;
+}
+
 .blurred {
 	filter: blur(4px);
-}
-
-.section-heading {
-  margin-bottom: 96px;
-}
-
-.section-heading.less-mb {
-  margin-bottom: 48px;
-}
-
-.section-heading h2 {
-  margin-bottom: 0;
 }
 
 .green-overlay {
@@ -169,6 +172,13 @@ section:not(#hero) {
   background-color: var(--dark-green);
   z-index: 2;
   transition: 0.3s;
+}
+
+.parallax {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* loader */

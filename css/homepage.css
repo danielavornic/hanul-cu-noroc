@@ -7,10 +7,6 @@
   align-items: center;
   color: white;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 	background-image: url('../images/hero-bg-1.jpg');
   -ms-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -53,8 +49,6 @@ h1 {
 /* about section */
 #about {
   background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
-  background-attachment: fixed;
-  background-repeat: space;
 }
 
 .about-images {
@@ -141,8 +135,6 @@ h1 {
 /* gallery section */
 #gallery {
   background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
-  background-attachment: fixed;
-  background-repeat: space;
 }
 
 #slider {
@@ -188,10 +180,6 @@ h1 {
 #video {
   background-image: url('../images/video-bg.jpg');
   position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,8 +228,6 @@ h1 {
 /* reviews section */
 #reviews {
   background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
-  background-attachment: fixed;
-  background-repeat: space;
 }
 
 #reviews .section-heading {
