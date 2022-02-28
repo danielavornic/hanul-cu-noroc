@@ -154,6 +154,17 @@ section:not(#hero) {
   margin-bottom: 0;
 }
 
+.green-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-green);
+  z-index: 2;
+  transition: 0.3s;
+}
+
 /* loader */
 #loading {
   position: fixed;
