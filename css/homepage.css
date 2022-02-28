@@ -12,20 +12,17 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 	background-image: url('../images/hero-bg-1.jpg');
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-	backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-animation: heroBgAnimation 24s ease-in-out infinite 0s;
-  -moz-animation: heroBgAnimation 24s ease-in-out infinite 0s;
-  -o-animation: heroBgAnimation 24s ease-in-out infinite 0s;
   -ms-animation: heroBgAnimation 24s ease-in-out infinite 0s;
+  -moz-animation: heroBgAnimation 24s ease-in-out infinite 0s;
+  -webkit-animation: heroBgAnimation 24s ease-in-out infinite 0s;  
   animation: heroBgAnimation 24s ease-in-out infinite 0s;
 }
 
@@ -39,6 +36,7 @@
 
 h1 {
   font-size: 112px;
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -103,6 +101,9 @@ h1 {
 
 .service-box:hover {
   box-shadow: 0 0 14px rgb(0 0 0 / 2%);
+  -ms-transform: translateY(-6px) !important;
+  -moz-transform: translateY(-6px) !important;
+  -webkit-transform: translateY(-6px) !important;
   transform: translateY(-6px) !important;
 }
 
@@ -215,10 +216,9 @@ h1 {
   z-index: 1;
   border-radius: 50%;
   box-shadow: 0 0 0 0 var(--snow);
-  -webkit-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
-  -moz-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
   -ms-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
   animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -235,6 +235,81 @@ h1 {
 
 #video .video-icon:hover i {
   color: var(--dark-green);
+}
+
+/* reviews section */
+#reviews {
+  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
+  background-attachment: fixed;
+  background-repeat: space;
+}
+
+#reviews .section-heading {
+  text-align: center;
+}
+
+.review-box {
+  background-color: var(--beige);
+  padding: 48px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.review-box:hover {
+  box-shadow: 0 0 14px rgb(0 0 0 / 5%);
+}
+
+.review-box > i {
+  font-size: 56px;
+  color: var(--green);
+  position: absolute;
+  top: 0;
+  -ms-transform: translateY(-50%) rotateY(0) rotateX(0);
+  -moz-transform: translateY(-50%) rotateY(0) rotateX(0);
+  -webkit-transform: translateY(-50%) rotateY(0) rotateX(0);
+  transform: translateY(-50%) rotateY(0) rotateX(0);
+  transition: 0.5s;
+}
+
+.review-box:hover > i {
+  -ms-transform: translateY(-50%) rotateY(-180deg) rotateX(-180deg);
+  -moz-transform: translateY(-50%) rotateY(-180deg) rotateX(-180deg);
+  -webkit-transform: translateY(-50%) rotateY(-180deg) rotateX(-180deg);
+  transform: translateY(-50%) rotateY(-180deg) rotateX(-180deg);
+}
+
+.review p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--light-gray);
+  padding-top: 24px;
+}
+
+.reviewer-name {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.reviewer-name a {
+  color: var(--black);
+}
+
+.reviewer-pic {
+  margin-right: 18px;
+}
+
+.reviewer-pic img {
+  width: 50px;
+  height: 50px;
+}
+
+.stars .icofont-star {
+  color: var(--yellow);
 }
 
 /* animation for background images of hero section */
@@ -264,31 +339,6 @@ h1 {
   }
 }
 @-moz-keyframes heroBgAnimation {
-  0%,
-  12% {
-    background-image: url('../images/hero-bg-1.jpg'),
-      url('../images/hero-bg-2.jpg');
-  }
-  25%,
-  37% {
-    background-image: url('../images/hero-bg-2.jpg'),
-      url('../images/hero-bg-3.jpg');
-  }
-  50%,
-  62% {
-    background-image: url('../images/hero-bg-3.jpg'),
-      url('../images/hero-bg-4.jpg');
-  }
-  75%,
-  87% {
-    background-image: url('../images/hero-bg-4.jpg'),
-      url('../images/hero-bg-1.jpg');
-  }
-  100% {
-    background-image: url('../images/hero-bg-1.jpg');
-  }
-}
-@-o-keyframes heroBgAnimation {
   0%,
   12% {
     background-image: url('../images/hero-bg-1.jpg'),
@@ -367,7 +417,6 @@ h1 {
 /* animation for pulsting video button */
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
-@-o-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 @keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 
@@ -437,6 +486,10 @@ h1 {
     display: block;
     width: calc(100% - 98px);
     margin-top: 36px;
+  }
+
+  .review-box {
+    margin-bottom: 48px;
   }
 }
 
