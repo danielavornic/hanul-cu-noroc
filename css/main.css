@@ -155,8 +155,12 @@ p {
 }
 
 /* other */
-section:not(#hero) {
+section:not(#hero, .small-section) {
   padding: 140px 0;
+}
+
+section.small-section {
+  padding: 70px 0;
 }
 
 .blurred {
@@ -380,8 +384,12 @@ header.sticky .nav-item a::after {
 }
 
 @media screen and (max-width: 768px) {
-  section:not(#hero) {
+  section:not(#hero, .small-section) {
     padding: 90px 0;
+  }
+
+  section.small-section {
+    padding: 45px 0;
   }
 
   .section-heading.less-mb {
