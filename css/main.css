@@ -46,13 +46,43 @@ body::-webkit-scrollbar-thumb:hover {
   background: var(--dark-green); 
 }
 
-/* text */
-h1, h2, h3, h4, h5, h6 {
+/* links */
+a {
+  text-decoration: none;
   color: var(--black);
 }
 
-a {
-  text-decoration: none;
+.underlined-link {
+  color: var(--green);
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.underlined-link.white {
+  color: white;
+}
+
+.underlined-link.white:hover {
+  color: var(--beige);
+}
+
+.underlined-link:hover {
+  color: var(--dark-green)
+}
+
+.underlined-link::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+/* headings and paragraphs */
+h1, h2, h3, h4, h5, h6 {
   color: var(--black);
 }
 
@@ -118,6 +148,8 @@ p {
 	text-transform: uppercase;
   text-align: center;
   transition: 0.3s ease-out;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .btn-white {
@@ -131,10 +163,23 @@ p {
   background-position: left;
 }
 
+.btn-green {
+  color: white;
+  background: linear-gradient(to left, var(--dark-green) 50%, white 50%) right;
+  background-size: 200%;
+  border-color: white;
+}
+
+.btn-green:hover {
+  color: var(--dark-green);
+  background-position: left;
+  border-color: var(--dark-green);
+}
+
 .btn-white-transparent {
   color: white;
   background: transparent;
-	border: 1px solid white;
+	border-color: white;
 }
 
 .btn-white-transparent:hover {
@@ -145,7 +190,7 @@ p {
 .btn-green-transparent {
   color: var(--dark-green);
   background: linear-gradient(to left, transparent 50%, var(--dark-green) 50%) right;
-	border: 1px solid var(--dark-green);
+	border-color: var(--dark-green);
   background-size: 200%;
 }
 
@@ -183,6 +228,11 @@ section:not(#hero, .small-section) {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.read-more-container {
+  text-align: right;
+  margin-top: 48px;
 }
 
 /* loader */
@@ -515,5 +565,9 @@ footer i:hover {
 @media screen and (max-width: 575px) {
   .section-heading {
     margin-bottom: 64px;
+  }
+
+  .read-more-container {
+    margin-top: 36px;
   }
 }

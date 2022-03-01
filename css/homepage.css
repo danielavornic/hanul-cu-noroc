@@ -42,7 +42,7 @@ h1 {
   margin-top: 64px;
 }
 
-.main-btns .btn-white {
+.main-btns .btn:first-child {
   margin-right: 18px;
 }
 
@@ -170,10 +170,6 @@ h1 {
 
 .transition {
   transition: 0.7s;
-}
-
-#gallery .btn {
-  display: none;
 }
 
 /* video section */
@@ -305,6 +301,10 @@ h1 {
 
 #booking h2 {
   color: white;
+}
+
+#booking .btn {
+  margin-right: 18px;
 }
 
 /* animation for background images of hero section */
@@ -453,8 +453,8 @@ h1 {
   .about-images .img-container:nth-child(2) {
     display: none;
   }
-  
-  .service-box {
+
+  .service-box-container:not(:last-child) .service-box {
     margin-bottom: 24px;
   }
 
@@ -475,12 +475,6 @@ h1 {
   .slide-content img {
     object-fit: cover;
     width: 100%;
-  }
-
-  #gallery .btn {
-    display: block;
-    width: calc(100% - 98px);
-    margin-top: 36px;
   }
 
   .review-box {
