@@ -511,6 +511,16 @@ h1 {
   #about .text {
     margin-top: 48px;
   }
+
+  #booking h2 {
+    text-align: center;
+  }
+
+  #booking .btn {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -549,7 +559,7 @@ h1 {
     display: none;
   }
 
-  #about .btn {
+  #about .btn, #booking .btn {
     width: calc(100% - 98px);
   }
 }
