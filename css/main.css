@@ -282,6 +282,7 @@ nav > .row {
   font-family: 'Butler', serif;
 }
 
+
 .nav-item a::after {
   content: '';
   background: white;
@@ -291,7 +292,8 @@ nav > .row {
   transition: 0.2s;
 }
 
-.nav-item a:hover::after {
+.nav-item a:hover::after, 
+.nav-item.active a::after {
   width: 100%;
 }
 
