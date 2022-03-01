@@ -16,7 +16,7 @@ $(function () {
   const initSlider = () => {
     const leftPos = slideWidth - slideWidth * 0.3;
 
-    if (window.matchMedia('(min-width: 769px)').matches) {
+    if (window.matchMedia('(min-width: 991px)').matches) {
       slider.css('left', `-${leftPos}px`);
     } else {
       slider.css('left', '0');
