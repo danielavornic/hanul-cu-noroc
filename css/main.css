@@ -159,7 +159,7 @@ section:not(#hero, .small-section) {
   padding: 140px 0;
 }
 
-section.small-section {
+.small-section {
   padding: 70px 0;
 }
 
@@ -245,18 +245,18 @@ nav > .row {
   display: flex;
 }
 
-.menu-center img,
-.menu-logo img {
+.logo {
   transition: opacity ease-in 0.3s;
+  width: 50px;
+  height: 50px;
 }
 
-.menu-center img {
-  margin: 0 60px;
-}
-
-.menu-center img:hover,
-.menu-logo img:hover {
+.logo:hover {
   opacity: 0.8;
+}
+
+.menu-center .logo {
+  margin: 0 60px;
 }
 
 .menu-center a::after,
@@ -285,7 +285,6 @@ nav > .row {
   color: white;
   font-family: 'Butler', serif;
 }
-
 
 .nav-item a::after {
   content: '';
@@ -340,12 +339,57 @@ header.sticky .nav-item a::after {
 
 #menu-icon.active::before {
   top: 50%;
+  -moz-transform: rotate(-45deg) translateY(-50%);
+  -ms-transform: rotate(-45deg) translateY(-50%);
+  -webkit-transform: rotate(-45deg) translateY(-50%);
   transform: rotate(-45deg) translateY(-50%);
 }
 
 #menu-icon.active::after {
   bottom: 50%;
+  -moz-transform: rotate(45deg) translateY(-50%);
+  -ms-transform: rotate(45deg) translateY(-50%);
+  -webkit-transform: rotate(45deg) translateY(-50%);
   transform: rotate(45deg) translateY(-50%);
+}
+
+/* footer */
+footer {
+  background-color: var(--black);
+  padding: 24px 0;
+}
+
+footer .row {
+  align-items: center;
+}
+
+footer p {
+  text-align: center;
+  color: var(--light-gray);
+  margin: 0;
+}
+
+.disclaimer {
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid var(--gray);
+}
+
+footer i {
+  color: var(--light-gray);
+  transition: 0.3s;
+}
+
+footer i:hover {
+  color: white;
+}
+
+.social-media {
+  text-align: right;
+}
+
+.social-media a:first-child {
+  margin-right: 16px;
 }
 
 /* media queries */
@@ -388,7 +432,7 @@ header.sticky .nav-item a::after {
     padding: 90px 0;
   }
 
-  section.small-section {
+  .small-section {
     padding: 45px 0;
   }
 
@@ -455,6 +499,16 @@ header.sticky .nav-item a::after {
 
   .nav-item a::after {
     background-color: var(--black);
+  }
+
+  footer .logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .social-media {
+    text-align: center;
+    margin: 18px 0;
   }
 }
 
