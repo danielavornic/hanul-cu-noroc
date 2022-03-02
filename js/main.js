@@ -3,42 +3,47 @@ $(function () {
 
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
-  const menuLogo = $('header .menu-center img').first();
+  const menuLogo = $('.menu-center .logo').first();
   const header = $('header').first();
+  const wrapper = $('#wrapper');
   let prevSt = 0;
+
+  const isScreenLg = () => window.matchMedia('(min-width: 769px)').matches;
 
   const toggleMenu = () => {
     menu
       .animate({ 'margin-right': menu.hasClass('hidden') ? '0' : '-100%' })
       .toggleClass('hidden');
     menuIcon.toggleClass('active');
-    $('body > *').not('body > header').toggleClass('blurred');
+    wrapper.toggleClass('blur');
   };
 
   const toggleMenuOnResize = () => {
-    if (window.matchMedia('(min-width: 769px)').matches) {
+    if (isScreenLg()) {
       menu.css('margin-right', 0);
-      $('.blurred').removeClass('blurred');
+      wrapper.removeClass('blur');
     } else {
       if (menu.hasClass('hidden')) {
         menu.css('margin-right', '-100%');
-        $('.blurred').removeClass('blurred');
+        wrapper.removeClass('blur');
       } else {
-        $('body > *').not('body > header').addClass('blurred');
+        wrapper.addClass('blur');
       }
     }
   };
 
   const toggleNavOnScroll = () => {
-    if (window.matchMedia('(min-width: 769px)').matches) {
+    if (isScreenLg()) {
       let st = $(this).scrollTop();
       if (st <= 0 || st > prevSt) {
         header.removeClass('sticky');
-        menuLogo.attr('src', '../images/logos/logo-white.png');
+        if (header.hasClass('transparent'))
+          menuLogo.attr('src', '../images/logos/logo-white.png');
         if (st > prevSt) header.addClass('hidden');
       } else {
         header.removeClass('hidden').addClass('sticky');
-        menuLogo.attr('src', '../images/logos/logo.png');
+        if (header.hasClass('transparent'))
+          menuLogo.attr('src', '../images/logos/logo.png');
       }
       prevSt = st;
     }
@@ -48,8 +53,13 @@ $(function () {
   $(window).on('resize', toggleMenuOnResize);
   $(window).scroll(toggleNavOnScroll);
 
-  if ($(window).scrollTop() > 0 && window.matchMedia('(min-width: 769px)').matches)
+  if ($(window).scrollTop() > 0 && isScreenLg())
     header.removeClass('sticky').addClass('hidden');
 
   AOS.init();
+
+  $('.tilting-image').tilt({
+    scale: 1.02,
+    maxTilt: 10,
+  });
 });
