@@ -8,13 +8,11 @@
     <meta name="keywords" content="pensiune turistica, cazare, costesti, duruitoarea veche, rascani, moldova" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico" />
-    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700" />
-    <!-- other stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" crossorigin="anonymous" />
-    <!-- we have used boostrap for its grid system only -->
+    <!-- bootstrap is used for its grid system only -->
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/icofont.min.css" />
@@ -22,13 +20,11 @@
     <link rel="stylesheet" href="css/homepage.css" />
   </head>
   <body>
-    <!-- page loader -->
     <div id="loading">
       <img src="images/loading.gif" alt="Hanul cu Noroc Loading" />
     </div>
-    <!-- start header -->
-    <header>
-      <nav class="container">
+    <header class="transparent">
+      <nav class="container-fluid">
         <div class="row">
           <div class="col menu-logo">
             <a href="index.html">
@@ -51,7 +47,7 @@
                 </li>
               </ul>
               <ul class="menu-right">
-                <li class="nav-item"><a href="about-us.html">Despre noi</a></li>
+                <li class="nav-item"><a href="about.html">Despre noi</a></li>
                 <li class="nav-item"><a href="contact.html">Contacte</a></li>
                 <li class="nav-item"><a href="booking.html">Rezervă</a></li>
               </ul>
@@ -60,306 +56,291 @@
         </div>
       </nav>
     </header>
-    <!-- end header -->
-    <!-- start hero section -->
-    <section id="hero" class="parallax">
-      <div class="darker-bg"></div>
-      <div data-aos="fade-up" data-aos-duration="1200">
-        <h1>Hanul cu Noroc</h1>
-        <p class="subheading">Pensiune turistică din Duruitoarea Veche, Moldova</p>
-        <div class="main-btns">
-          <a href="#about" class="btn btn-white">Află mai multe</a>
-          <a href="booking.html" class="btn btn-white-transparent">Rezervă</a>
-        </div>
-      </div>
-    </section>
-    <!-- end hero section -->
-    <!-- start about section -->
-    <section id="about" class="parallax">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="about-images">
-              <div class="img-container" data-aos="fade-down" data-aos-duration="1000">
-                <img src="images/yard-vertical.jpg" alt="Hanul cu Noroc" />
-              </div>
-              <div class="img-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <img src="images/swing-vertical.jpg" alt="Hanul cu Noroc" />
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 text" data-aos="fade" data-aos-delay="200" data-aos-duration="1000">
-            <div class="section-heading less-mb">
-              <p class="subheading-2 left-dash">Despre noi</p>
-              <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
-            </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolorum accusamus veniam expedita reprehenderit, repudiandae error sint. Laborum tenetur id perspiciatis sapiente optio reprehenderit, corporis voluptates
-              quod aut veniam sequi?
-            </p>
-            <a href="about.html" class="btn btn-green">Află mai multe</a>
+    <div id="wrapper">
+      <section id="hero" class="parallax">
+        <div class="darker-bg"></div>
+        <div data-aos="fade-up" data-aos-duration="1200">
+          <h1>Hanul cu Noroc</h1>
+          <p class="subheading-main">Pensiune turistică din Duruitoarea Veche, Moldova</p>
+          <div class="main-btns">
+            <a href="#about" class="btn btn-white">Află mai multe</a>
+            <a href="booking.html" class="btn btn-white-transparent">Rezervă</a>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- end about section -->
-    <!-- start services section -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 section-heading">
-            <p class="subheading-2">Serviciile noastre</p>
-            <h2>Lorem ipsum dolor sit amet consectetur</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-lg-4 service-box-container">
-            <div class="service-box" data-aos="fade" data-aos-duration="500">
-              <div class="service-heading">
-                <i class="icofont-hotel"></i>
-                <div>
-                  <h3>Cazare</h3>
-                  <p class="small-text">Lorem ipsum</p>
+      </section>
+      <section id="about" class="parallax">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="about-images">
+                <div class="img-container" data-aos="fade-down" data-aos-duration="1000">
+                  <img src="images/yard-vertical.jpg" alt="Hanul cu Noroc" />
+                </div>
+                <div class="img-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                  <img src="images/swing-vertical.jpg" alt="Hanul cu Noroc" />
                 </div>
               </div>
-              <div class="service-description">
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem ipsum has typesetting.</p>
+            </div>
+            <div class="col-12 col-md-6 text" data-aos="fade" data-aos-delay="200" data-aos-duration="1000">
+              <div class="section-heading less-mb">
+                <p class="subheading left-dash">Despre noi</p>
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
               </div>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolorum accusamus veniam expedita reprehenderit, repudiandae error sint. Laborum tenetur id perspiciatis sapiente optio reprehenderit, corporis voluptates
+                quod aut veniam sequi?
+              </p>
+              <a href="about.html" class="btn btn-green">Află mai multe</a>
             </div>
           </div>
-          <div class="col-12 col-lg-4 service-box-container">
-            <div class="service-box" data-aos="fade" data-aos-duration="500">
-              <div class="service-heading">
-                <i class="icofont-restaurant"></i>
-                <div>
-                  <h3>Meniu</h3>
-                  <p class="small-text">Lorem ipsum</p>
+        </div>
+      </section>
+      <section id="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 section-heading">
+              <p class="subheading">Serviciile noastre</p>
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-4 service-box-container">
+              <div class="service-box" data-aos="fade" data-aos-duration="500">
+                <div class="service-heading">
+                  <i class="icofont-hotel"></i>
+                  <div>
+                    <h3>Cazare</h3>
+                    <p class="small-text">Lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="service-description">
+                  <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem ipsum has typesetting.</p>
                 </div>
               </div>
-              <div class="service-description">
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem ipsum has typesetting.</p>
-              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-4 service-box-container">
-            <div class="service-box" data-aos="fade" data-aos-duration="500">
-              <div class="service-heading">
-                <i class="icofont-direction-sign"></i>
-                <div>
-                  <h3>Activități</h3>
-                  <p class="small-text">Lorem ipsum</p>
+            <div class="col-12 col-lg-4 service-box-container">
+              <div class="service-box" data-aos="fade" data-aos-duration="500">
+                <div class="service-heading">
+                  <i class="icofont-restaurant"></i>
+                  <div>
+                    <h3>Meniu</h3>
+                    <p class="small-text">Lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="service-description">
+                  <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem ipsum has typesetting.</p>
                 </div>
               </div>
-              <div class="service-description">
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem ipsum has typesetting.</p>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 read-more-container">
-            <a href="services.html" class="underlined-link">Citește mai mult</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end services secion -->
-    <!-- start gallery section -->
-    <section id="gallery" class="parallax">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 section-heading">
-            <p class="subheading-2 left-dash">Galerie</p>
-            <h2>Lorem ipsum dolor</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div id="slider">
-            <div class="slide" data-aos="fade" data-aos-duration="500">
-              <div class="slide-content">
-                <div class="green-overlay"></div>
-                <img src="images/houses-closeup.jpg" alt="Hanul cu Noroc" />
-              </div>
-            </div>
-            <div class="slide" data-aos="fade" data-aos-duration="500">
-              <div class="slide-content">
-                <div class="green-overlay"></div>
-                <img src="images/yard-tent.jpg" alt="Hanul cu Noroc" />
-              </div>
-            </div>
-            <div class="slide" data-aos="fade" data-aos-duration="500">
-              <div class="slide-content">
-                <div class="green-overlay"></div>
-                <img src="images/swing.jpg" alt="Hanul cu Noroc" />
-              </div>
-            </div>
-            <div class="slide" data-aos="fade" data-aos-duration="500">
-              <div class="slide-content">
-                <div class="green-overlay"></div>
-                <img src="images/yard.jpg" alt="Hanul cu Noroc" />
+            <div class="col-12 col-lg-4 service-box-container">
+              <div class="service-box" data-aos="fade" data-aos-duration="500">
+                <div class="service-heading">
+                  <i class="icofont-direction-sign"></i>
+                  <div>
+                    <h3>Activități</h3>
+                    <p class="small-text">Lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="service-description">
+                  <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem ipsum has typesetting.</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-12 read-more-container">
-              <a href="gallery.html" class="underlined-link">Explorează galeria</a>
+              <a href="services.html" class="underlined-link">Citește mai mult</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- end gallery section -->
-    <!-- start video section -->
-    <section id="video" class="parallax">
-      <div class="green-overlay"></div>
-      <a href="https://www.facebook.com/watch/?v=641042913200070" class="video-icon-box" target="_blank" title="Privește video">
-        <div class="video-icon" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
-          <i class="icofont-ui-play"></i>
-        </div>
-      </a>
-    </section>
-    <!-- end video section -->
-    <!-- start reviews section -->
-    <section id="reviews" class="parallax">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-heading">
-              <p class="subheading-2">Recenziile pensiunii</p>
-              <h2>Ce spun vizitatorii noștri</h2>
+      </section>
+      <section id="gallery" class="parallax">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 section-heading">
+              <p class="subheading left-dash">Galerie</p>
+              <h2>Lorem ipsum dolor</h2>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <div class="review-box" data-aos="fade" data-aos-duration="600" data-aos-delay="100">
-              <i class="icofont-quote-left"></i>
-              <div class="review">
-                <p>
-                  Totul a fost perfect, localizarea este ideala, acces facil, peisaje de vis. Curățenia exemplară, posibilitatea de a face mâncare în aer liber, gazdele foarte amabile și atente la micile detalii au făcut ca odihna să fie
-                  memorabilă.
-                </p>
-              </div>
-              <div class="review-footer">
-                <div class="reviewer-pic">
-                  <img src="https://lh3.googleusercontent.com/a-/AOh14Ggd4uUP_BuxpbAP2RW2xyfGen91DKlFFsieEAxL3A=w81-h81-p-rp-mo-br100" alt="Reviewer Image" />
+          <div class="row">
+            <div id="slider">
+              <div class="slide" data-aos="fade" data-aos-duration="500">
+                <div class="slide-content">
+                  <div class="green-overlay"></div>
+                  <img src="images/houses-closeup.jpg" alt="Hanul cu Noroc" />
                 </div>
-                <div class="reviewer">
-                  <div class="stars">
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                  </div>
-                  <p class="reviewer-name">
-                    <a href="https://goo.gl/maps/XanyZtBE4rL2AP9a9" target="_blank" title="Vezi recenzia pe Google">Jane Foca</a>
+              </div>
+              <div class="slide" data-aos="fade" data-aos-duration="500">
+                <div class="slide-content">
+                  <div class="green-overlay"></div>
+                  <img src="images/yard-tent.jpg" alt="Hanul cu Noroc" />
+                </div>
+              </div>
+              <div class="slide" data-aos="fade" data-aos-duration="500">
+                <div class="slide-content">
+                  <div class="green-overlay"></div>
+                  <img src="images/swing.jpg" alt="Hanul cu Noroc" />
+                </div>
+              </div>
+              <div class="slide" data-aos="fade" data-aos-duration="500">
+                <div class="slide-content">
+                  <div class="green-overlay"></div>
+                  <img src="images/yard.jpg" alt="Hanul cu Noroc" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 read-more-container">
+                <a href="gallery.html" class="underlined-link">Explorează galeria</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="video" class="parallax">
+        <div class="green-overlay"></div>
+        <a href="https://www.facebook.com/watch/?v=641042913200070" class="video-icon-box" target="_blank" title="Privește video">
+          <div class="video-icon" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
+            <i class="icofont-ui-play"></i>
+          </div>
+        </a>
+      </section>
+      <section id="reviews" class="parallax">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-heading">
+                <p class="subheading">Recenziile pensiunii</p>
+                <h2>Ce spun vizitatorii noștri</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="review-box" data-aos="fade" data-aos-duration="600" data-aos-delay="100">
+                <i class="icofont-quote-left"></i>
+                <div class="review">
+                  <p>
+                    Totul a fost perfect, localizarea este ideala, acces facil, peisaje de vis. Curățenia exemplară, posibilitatea de a face mâncare în aer liber, gazdele foarte amabile și atente la micile detalii au făcut ca odihna să fie
+                    memorabilă.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-4">
-            <div class="review-box" data-aos="fade" data-aos-duration="600" data-aos-delay="300">
-              <i class="icofont-quote-left"></i>
-              <div class="review">
-                <p>Frumos și liniște! E aproape de plajele de la Costești, sunt toate condițiile de care poți avea nevoie. În plus, peisajul de pe deal îți ia răsuflarea, perfect pentru a întîmpina sau petrece soarele!</p>
-              </div>
-              <div class="review-footer">
-                <div class="reviewer-pic">
-                  <img src="https://lh3.googleusercontent.com/a-/AOh14Gj0n09SsOL6A1pZrq4QJSSa6XXDyqWZYwbiAmjG=w81-h81-p-rp-mo-br100" alt="Reviewer Image" />
-                </div>
-                <div class="reviewer">
-                  <div class="stars">
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
+                <div class="review-footer">
+                  <div class="reviewer-pic">
+                    <img src="https://lh3.googleusercontent.com/a-/AOh14Ggd4uUP_BuxpbAP2RW2xyfGen91DKlFFsieEAxL3A=w81-h81-p-rp-mo-br100" alt="Reviewer Image" />
                   </div>
-                  <p class="reviewer-name">
-                    <a href="https://goo.gl/maps/2khJDKCeaRQtM9U6A" target="_blank" title="Vezi recenzia pe Google">Catalina F</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-4">
-            <div class="review-box" data-aos="fade" data-aos-duration="600" data-aos-delay="500">
-              <i class="icofont-quote-left"></i>
-              <div class="review">
-                <p>O locație minunată, o liniște tămăduitoare, aer curat și o natură de poveste! Condiții destul de bune, și o atmosferă ca acasă! Recomandăm cu încredere, mai ales că stapânul dl Nicolae este un izvor de cunoștinte!</p>
-              </div>
-              <div class="review-footer">
-                <div class="reviewer-pic">
-                  <img src="https://lh3.googleusercontent.com/a/AATXAJx7abgORlJIk34AJha_3sWfYLZ29qDIUytlm_NZ=w81-h81-p-rp-mo-br100" alt="Reviewer Image" />
-                </div>
-                <div class="reviewer">
-                  <div class="stars">
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
-                    <i class="icofont-star"></i>
+                  <div class="reviewer">
+                    <div class="stars">
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                    </div>
+                    <p class="reviewer-name">
+                      <a href="https://goo.gl/maps/XanyZtBE4rL2AP9a9" target="_blank" title="Vezi recenzia pe Google">Jane Foca</a>
+                    </p>
                   </div>
-                  <p class="reviewer-name">
-                    <a href="https://goo.gl/maps/NAJNarDyM4pMZh3bA" target="_blank" title="Vezi recenzia pe Google">marcel jalbi</a>
-                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="review-box" data-aos="fade" data-aos-duration="600" data-aos-delay="300">
+                <i class="icofont-quote-left"></i>
+                <div class="review">
+                  <p>Frumos și liniște! E aproape de plajele de la Costești, sunt toate condițiile de care poți avea nevoie. În plus, peisajul de pe deal îți ia răsuflarea, perfect pentru a întîmpina sau petrece soarele!</p>
+                </div>
+                <div class="review-footer">
+                  <div class="reviewer-pic">
+                    <img src="https://lh3.googleusercontent.com/a-/AOh14Gj0n09SsOL6A1pZrq4QJSSa6XXDyqWZYwbiAmjG=w81-h81-p-rp-mo-br100" alt="Reviewer Image" />
+                  </div>
+                  <div class="reviewer">
+                    <div class="stars">
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                    </div>
+                    <p class="reviewer-name">
+                      <a href="https://goo.gl/maps/2khJDKCeaRQtM9U6A" target="_blank" title="Vezi recenzia pe Google">Catalina F</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="review-box" data-aos="fade" data-aos-duration="600" data-aos-delay="500">
+                <i class="icofont-quote-left"></i>
+                <div class="review">
+                  <p>O locație minunată, o liniște tămăduitoare, aer curat și o natură de poveste! Condiții destul de bune, și o atmosferă ca acasă! Recomandăm cu încredere, mai ales că stapânul dl Nicolae este un izvor de cunoștinte!</p>
+                </div>
+                <div class="review-footer">
+                  <div class="reviewer-pic">
+                    <img src="https://lh3.googleusercontent.com/a/AATXAJx7abgORlJIk34AJha_3sWfYLZ29qDIUytlm_NZ=w81-h81-p-rp-mo-br100" alt="Reviewer Image" />
+                  </div>
+                  <div class="reviewer">
+                    <div class="stars">
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                      <i class="icofont-star"></i>
+                    </div>
+                    <p class="reviewer-name">
+                      <a href="https://goo.gl/maps/NAJNarDyM4pMZh3bA" target="_blank" title="Vezi recenzia pe Google">marcel jalbi</a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- end reviews section -->
-    <!-- start booking CTA section -->
-    <section id="booking" class="small-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6" data-aos="fade" data-aos-duration="600">
-            <h2>Lorem ipsum dolor sit amet consectetur!</h2>
-            <a href="booking.html" class="btn btn-white-transparent">Rezervă acum</a>
-            <a href="contact.html" class="underlined-link white">Contactează-ne</a>
+      </section>
+      <section id="booking" class="small-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6" data-aos="fade" data-aos-duration="600">
+              <h2>Lorem ipsum dolor sit amet consectetur!</h2>
+              <a href="booking.html" class="btn btn-white-transparent">Rezervă acum</a>
+              <a href="contact.html" class="underlined-link white">Contactează-ne</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- end booking CTA section -->
-    <!-- start footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-2 order-1">
-            <a href="#hero" title="Defilează sus">
-              <img src="images/logos/logo-white.png" class="logo" alt="Hanul cu Noroc logo" />
-            </a>
-          </div>
-          <div class="col-12 col-md-8 order-3 order-md-2">
-            <p>&copy; 2022 Realizat de Daniela Vornic și Alexandra Afanasiuc</p>
-          </div>
-          <div class="col-12 col-md-2 order-2 order-md-3 social-media">
-            <a href="https://www.instagram.com/hanul_cu_noroc/" target="_blank">
-              <i class="icofont-instagram"></i>
-            </a>
-            <a href="javascript:void(0);">
-              <i class="icofont-facebook"></i>
-            </a>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-2 order-1">
+              <a href="#hero" title="Navighează sus">
+                <img src="images/logos/logo-white.png" class="logo" alt="Hanul cu Noroc logo" />
+              </a>
+            </div>
+            <div class="col-12 col-md-8 order-3 order-md-2">
+              <p>&copy; 2022 Realizat de Daniela Vornic și Alexandra Afanasiuc</p>
+            </div>
+            <div class="col-12 col-md-2 order-2 order-md-3 social-media">
+              <a href="https://www.instagram.com/hanul_cu_noroc/" target="_blank">
+                <i class="icofont-instagram"></i>
+              </a>
+              <a href="javascript:void(0);">
+                <i class="icofont-facebook"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row disclaimer">
-          <div class="col-12">
-            <p class="small-text">
-              Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors” organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.
-            </p>
+        <div class="container-fluid">
+          <div class="row disclaimer">
+            <div class="col-12">
+              <p class="small-text">
+                Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors” organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-    <!-- end footer -->
-    <!-- javascript files -->
+      </footer>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
