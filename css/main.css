@@ -357,8 +357,8 @@ nav > .row {
 }
 
 .menu-center a::after,
-.menu-logo a::after,
-.menu-logo {
+.nav-logo a::after,
+.nav-logo {
   display: none;
 }
 
@@ -564,7 +564,7 @@ footer i:hover {
 }
 
 @media all and (min-width: 769px) and (max-width: 990px) {
-  .menu-logo + .col-6 {
+  .menu-container {
     width: 100%;
   }
 }
@@ -600,7 +600,7 @@ footer i:hover {
     border-bottom: 1px solid var(--light-gray);
   }
 
-  .menu-logo,
+  .nav-logo,
   #toggler,
   #menu-icon {
     display: block;
