@@ -8,11 +8,9 @@
   color: white;
   text-align: center;
 	background-image: url('../images/hero-bg-1.jpg');
-  -ms-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -ms-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -512,8 +510,13 @@ h1 {
 
   #booking .btn {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 24px;
     width: fit-content;
+  }
+
+  #booking .underlined-link {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -529,7 +532,7 @@ h1 {
     margin-right: auto;
   }
 
-  .main-btns .btn-white {
+  .main-btns .btn:first-child {
     margin-right: 0;
     margin-bottom: 18px;
   }
@@ -539,7 +542,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 425px) {
   .about-images {
     flex-direction: column;
   }

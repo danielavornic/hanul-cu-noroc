@@ -58,6 +58,7 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   position: relative;
+  width: fit-content;
   transition: 0.3s;
 }
 
