@@ -29,9 +29,13 @@
 }
 
 h1 {
-  font-size: 112px;
   color: white;
-  margin-bottom: 1rem;
+  font-size: 120px;
+}
+
+.subheading-main {
+  font-size: 32px;
+  color: white;
 }
 
 .main-btns {
@@ -81,7 +85,7 @@ h1 {
   background-color: var(--beige);
 }
 
-#services h2, #services .subheading-2 {
+#services h2, #services .subheading {
   text-align: center;
 }
 
@@ -292,19 +296,6 @@ h1 {
   color: var(--yellow);
 }
 
-/* booking section */
-#booking {
-  background-color: var(--dark-green);
-}
-
-#booking h2 {
-  color: white;
-}
-
-#booking .btn {
-  margin-right: 18px;
-}
-
 /* animation for background images of hero section */
 @-webkit-keyframes heroBgAnimation {
   0%,
@@ -414,7 +405,7 @@ h1 {
 @keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 
 /* media queries */
-@media screen and (max-width: 1400px) {
+@media all and (max-width: 1400px) {
   .about-images .img-container {
     width: 240px;
   }
@@ -428,9 +419,9 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media all and (max-width: 1200px) {
   h1 {
-    font-size: 90px;
+    font-size: 96px;
   }
 
   .about-images .img-container {
@@ -442,7 +433,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 991px) {
+@media all and (max-width: 991px) {
   .about-images .img-container:nth-child(1) {
     width: 90%;
     align-self: center;
@@ -480,7 +471,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media all and (max-width: 767px) {
   #hero, #video {
     background-attachment: scroll;
   }
@@ -503,24 +494,9 @@ h1 {
   #about .text {
     margin-top: 48px;
   }
-
-  #booking h2 {
-    text-align: center;
-  }
-
-  #booking .btn {
-    display: block;
-    margin: 0 auto 24px;
-    width: fit-content;
-  }
-
-  #booking .underlined-link {
-    display: block;
-    margin: 0 auto;
-  }
 }
 
-@media screen and (max-width: 575px) {
+@media all and (max-width: 575px) {
   h1 {
     font-size: 72px;
   }
@@ -542,7 +518,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media all and (max-width: 425px) {
   .about-images {
     flex-direction: column;
   }

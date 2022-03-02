@@ -66,12 +66,12 @@ a {
   color: white;
 }
 
-.underlined-link.white:hover {
-  color: var(--beige);
-}
-
 .underlined-link:hover {
   color: var(--dark-green)
+}
+
+.underlined-link.white:hover {
+  color: var(--beige);
 }
 
 .underlined-link::after {
@@ -89,9 +89,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2,
-.subheading {
+.subheading-main {
   font-family: 'Butler', serif;
   font-weight: 500;
+}
+
+h1 {
+  font-size: 72px;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 h2 {
@@ -101,6 +107,11 @@ h2 {
 p {
   font-size: 16px;
   line-height: 32px;
+}
+
+.page-title h1 {
+  padding-top: 96px;
+  padding-bottom: 48px;
 }
 
 .section-heading {
@@ -116,18 +127,15 @@ p {
 }
 
 .subheading {
-  font-size: 32px;
-}
-
-.subheading-2 {
   color: var(--dark-green);
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 24px;
+  font-size: 1rem;
 }
 
-.subheading-2.left-dash::before {
+.subheading.left-dash::before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -201,8 +209,8 @@ p {
 	color: white;
 }
 
-/* other */
-section:not(#hero, .small-section) {
+/* sections related */
+section:not(#hero, .small-section, .page-title, .page-title-next) {
   padding: 140px 0;
 }
 
@@ -210,7 +218,35 @@ section:not(#hero, .small-section) {
   padding: 70px 0;
 }
 
-.blurred {
+.page-title {
+  width: 100vw;
+  height: fit-content;
+  position: relative;
+}
+
+.page-title-next {
+  margin-top: -200px;
+  padding: 340px 0 140px;
+  background-color: var(--beige);
+}
+
+.page-title .bg {
+  position: absolute;
+  width: 100vw;
+  height: calc(100% - 200px);
+}
+
+.tilting-image {
+  width: 100%;
+  height: 400px;
+  background-image: url('../images/hero-bg-1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-right: auto;
+}
+
+/* effects */
+.blur {
 	filter: blur(4px);
 }
 
@@ -232,6 +268,7 @@ section:not(#hero, .small-section) {
   background-attachment: fixed;
 }
 
+/* other */
 .read-more-container {
   text-align: right;
   margin-top: 48px;
@@ -262,8 +299,14 @@ header {
   border-bottom: 1px solid white;
   padding: 12px 0;
   z-index: 2;
-  background-color: transparent;
+  background-color: white;
+  box-shadow: 0 3px 14px rgb(0 0 0 / 5%);
   transition: 0.3s;
+}
+
+header.transparent:not(.sticky) {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 header.hidden {
@@ -272,8 +315,6 @@ header.hidden {
 
 header.sticky {
   top: 0;
-  background-color: white;
-  box-shadow: 0 3px 14px rgb(0 0 0 / 4%);
 }
 
 nav > .row {
@@ -297,6 +338,10 @@ nav > .row {
   display: flex;
 }
 
+.menu-left {
+  justify-content: flex-end;
+}
+
 .logo {
   transition: opacity ease-in 0.3s;
   width: 50px;
@@ -317,10 +362,6 @@ nav > .row {
   display: none;
 }
 
-.menu-left {
-  justify-content: flex-end;
-}
-
 .nav-item {
   margin: 0 36px;
 }
@@ -334,13 +375,13 @@ nav > .row {
 }
 
 .nav-item a {
-  color: white;
+  color: var(--black);
   font-family: 'Butler', serif;
 }
 
 .nav-item a::after {
   content: '';
-  background: white;
+  background: var(--black);
   width: 0;
   height: 0.7px;
   display: block;
@@ -352,12 +393,12 @@ nav > .row {
   width: 100%;
 }
 
-header.sticky .nav-item a {
-  color: var(--black);
+header.transparent:not(.sticky) .nav-item a::after {
+  background-color: white;
 }
 
-header.sticky .nav-item a::after {
-  background-color: var(--black);
+header.transparent:not(.sticky) .nav-item a {
+  color: white;
 }
 
 #menu-icon {
@@ -405,6 +446,19 @@ header.sticky .nav-item a::after {
   transform: rotate(45deg) translateY(-50%);
 }
 
+/* booking section */
+#booking {
+  background-color: var(--dark-green);
+}
+
+#booking h2 {
+  color: white;
+}
+
+#booking .btn {
+  margin-right: 24px;
+}
+
 /* footer */
 footer {
   background-color: var(--black);
@@ -419,12 +473,6 @@ footer p {
   text-align: center;
   color: var(--light-gray);
   margin: 0;
-}
-
-.disclaimer {
-  padding-top: 24px;
-  margin-top: 24px;
-  border-top: 1px solid var(--gray);
 }
 
 footer i {
@@ -444,19 +492,61 @@ footer i:hover {
   margin-right: 16px;
 }
 
+.disclaimer {
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid var(--gray);
+}
+
 /* media queries */
-@media screen and (max-width: 1200px) {
+@media all and (max-width: 1400px) {
+  .page-title-next {
+    margin-top: -180px;
+    padding: 320px 0 140px;
+  }
+
+  .page-title .bg {
+    height: calc(100% - 180px);
+  }
+
+  .page-title .bg {
+    height: calc(100% - 180px);
+  }
+
+  .tilting-image {
+    height: 360px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  h1 {
+    font-size: 64px;
+  }
+
   h2 {
     font-size: 36px;
+  }
+
+  .page-title-next {
+    margin-top: -150px;
+    padding: 290px 0 140px;
+  } 
+
+  .page-title .bg {
+    height: calc(100% - 150px);
   }
 
   .section-heading {
     margin-bottom: 72px;
   }
+
+  .tilting-image {
+    height: 300px;
+  }
 }
 
-@media screen and (max-width: 991px) {
-  .menu-center img {
+@media all and (max-width: 991px) {
+  .menu-center .logo {
     margin: 0 54px;
   }
 
@@ -473,15 +563,28 @@ footer i:hover {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 990px) {
   .menu-logo + .col-6 {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 768px) {
-  section:not(#hero, .small-section) {
+@media all and (max-width: 768px) {
+  section:not(#hero, .small-section, .page-title, .page-title-next) {
     padding: 90px 0;
+  }
+
+  .page-title-next {
+    margin-top: -180px;
+    padding: 270px 0 90px;
+  } 
+
+  .page-title .bg {
+    height: calc(100% - 180px);
+  }
+
+  .page-title h1 {
+    padding-bottom: 48px;
   }
 
   .small-section {
@@ -493,7 +596,7 @@ footer i:hover {
   }
 
   header {
-    background-color: white;
+    background-color: white !important;
     border-bottom: 1px solid var(--light-gray);
   }
 
@@ -544,12 +647,12 @@ footer i:hover {
     margin: 0 16px 20px;
   }
 
-  .nav-item a {
+  .nav-item a, header.transparent:not(.sticky) .nav-item a {
     color: var(--black);
     font-size: 18px;
   }
 
-  .nav-item a::after {
+  .nav-item a::after, header.transparent:not(.sticky) .nav-item a::after {
     background-color: var(--black);
   }
 
@@ -562,9 +665,41 @@ footer i:hover {
     text-align: center;
     margin: 18px 0;
   }
+
+  #booking h2 {
+    text-align: center;
+  }
+
+  #booking .btn {
+    display: block;
+    margin: 0 auto 24px;
+    width: fit-content;
+  }
+
+  #booking .underlined-link {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-@media screen and (max-width: 575px) {
+@media all and (max-width: 575px) {
+  h1 {
+    font-size: 56px;
+  }
+
+  .page-title-next {
+    margin-top: -120px;
+    padding: 210px 0 90px;
+  } 
+
+  .page-title .bg {
+    height: calc(100% - 120px);
+  }
+
+  .tilting-image {
+    height: 200px;
+  }
+
   .section-heading {
     margin-bottom: 64px;
   }

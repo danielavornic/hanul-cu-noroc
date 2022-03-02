@@ -1,0 +1,22 @@
+.page-title .bg {
+  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
+}
+
+/* our story section */
+#our-story {
+  text-align: center;
+}
+
+#our-story p {
+  width: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2rem;
+}
+
+@media all and (max-width: 768px) {
+  #our-story p {
+    width: 100%;
+  }
+}
