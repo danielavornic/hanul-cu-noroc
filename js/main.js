@@ -4,7 +4,8 @@ $(function () {
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
   const menuLogo = $('.menu-center .logo').first();
-  const header = $('header').first();
+  const topBar = $('.top-bar');
+  const nav = $('nav').first();
   const wrapper = $('#wrapper');
   let prevSt = 0;
 
@@ -36,13 +37,16 @@ $(function () {
     if (isScreenLg()) {
       let st = $(this).scrollTop();
       if (st <= 0 || st > prevSt) {
-        header.removeClass('sticky');
-        if (header.hasClass('transparent'))
+        nav.removeClass('sticky');
+        if (st > prevSt && st > 20) {
+          nav.addClass('hidden');
+          topBar.addClass('hidden');
+        } else if (st == 0) topBar.removeClass('hidden');
+        if (nav.hasClass('transparent'))
           menuLogo.attr('src', '../images/logos/logo-white.png');
-        if (st > prevSt) header.addClass('hidden');
       } else {
-        header.removeClass('hidden').addClass('sticky');
-        if (header.hasClass('transparent'))
+        nav.removeClass('hidden').addClass('sticky');
+        if (nav.hasClass('transparent'))
           menuLogo.attr('src', '../images/logos/logo.png');
       }
       prevSt = st;
@@ -54,12 +58,13 @@ $(function () {
   $(window).scroll(toggleNavOnScroll);
 
   if ($(window).scrollTop() > 0 && isScreenLg())
-    header.removeClass('sticky').addClass('hidden');
+    nav.removeClass('sticky').addClass('hidden');
 
   AOS.init();
 
-  $('.tilting-image').tilt({
-    scale: 1.02,
-    maxTilt: 10,
-  });
+  if ($('.tilting-image').length)
+    $('.tilting-image').tilt({
+      scale: 1.02,
+      maxTilt: 10,
+    });
 });

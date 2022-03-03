@@ -110,7 +110,7 @@ p {
 }
 
 .page-title h1 {
-  padding-top: 96px;
+  padding-top: 112px;
   padding-bottom: 48px;
 }
 
@@ -291,11 +291,60 @@ section:not(#hero, .small-section, .page-title, .page-title-next) {
   height: auto;
 }
 
-/* header */
-header {
+/* header (top bar & navbar) */
+header .row {
+  align-items: center;
+}
+
+.top-bar {
+  background-color: rgba(45, 45, 45, 0.6);
   position: fixed;
-  top: 0;
   width: 100vw;
+  padding: 8px 0;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.top-bar i {
+  color: white;
+  font-size: 13px;
+  margin-right: 4px;
+}
+
+.top-bar .contact-data {
+  text-align: right;
+}
+
+.top-bar .contact-data span {
+  font-size: 12px;
+  color: var(--light-gray);
+}
+
+.top-bar a:first-child {
+  margin-right: 12px;
+}
+
+.top-bar span:first-child {
+  margin-right: 16px;
+}
+
+.top-bar.white {
+  background-color: white;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.top-bar.white i {
+  color: var(--dark-green);
+}
+
+.top-bar.white span {
+  color: var(--gray);
+}
+
+nav {
+  position: fixed;
+  top: 35px;
+  width: 100%;
   border-bottom: 1px solid white;
   padding: 12px 0;
   z-index: 2;
@@ -304,16 +353,20 @@ header {
   transition: 0.3s;
 }
 
-header.transparent:not(.sticky) {
+nav.transparent:not(.sticky) {
   background-color: transparent;
   box-shadow: none;
 }
 
-header.hidden {
+nav.hidden {
   top: -78px;
 }
 
-header.sticky {
+.top-bar.hidden {
+  top: -35px;
+}
+
+nav.sticky {
   top: 0;
 }
 
@@ -393,11 +446,11 @@ nav > .row {
   width: 100%;
 }
 
-header.transparent:not(.sticky) .nav-item a::after {
+nav.transparent:not(.sticky) .nav-item a::after {
   background-color: white;
 }
 
-header.transparent:not(.sticky) .nav-item a {
+nav.transparent:not(.sticky) .nav-item a {
   color: white;
 }
 
@@ -595,7 +648,12 @@ footer i:hover {
     margin-bottom: 36px;
   }
 
-  header {
+  .top-bar {
+    display: none;
+  }
+
+  nav {
+    top: 0;
     background-color: white !important;
     border-bottom: 1px solid var(--light-gray);
   }
@@ -647,12 +705,12 @@ footer i:hover {
     margin: 0 16px 20px;
   }
 
-  .nav-item a, header.transparent:not(.sticky) .nav-item a {
+  .nav-item a, nav.transparent:not(.sticky) .nav-item a {
     color: var(--black);
     font-size: 18px;
   }
 
-  .nav-item a::after, header.transparent:not(.sticky) .nav-item a::after {
+  .nav-item a::after, nav.transparent:not(.sticky) .nav-item a::after {
     background-color: var(--black);
   }
 
