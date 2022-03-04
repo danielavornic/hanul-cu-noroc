@@ -64,7 +64,6 @@ $(function () {
 
   if ($('.tilting-image').length)
     $('.tilting-image').tilt({
-      scale: 1.02,
       maxTilt: 10,
     });
 });
