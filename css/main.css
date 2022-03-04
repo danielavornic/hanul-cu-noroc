@@ -224,12 +224,6 @@ section:not(#hero, .small-section, .page-title, .page-title-next) {
   position: relative;
 }
 
-.page-title-next {
-  margin-top: -200px;
-  padding: 340px 0 140px;
-  background-color: var(--beige);
-}
-
 .page-title .bg {
   position: absolute;
   width: 100vw;
@@ -240,10 +234,27 @@ section:not(#hero, .small-section, .page-title, .page-title-next) {
   background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
 }
 
+.page-title-next {
+  margin-top: -200px;
+  padding: 340px 0 140px;
+  background-color: var(--beige);
+}
+
+.page-title-next.center {
+  text-align: center;
+}
+
+.page-title-next.center p {
+  width: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2rem;
+}
+
 .tilting-image {
   width: 100%;
   height: 400px;
-  background-image: url('../images/hero-bg-1.jpg');
   background-size: cover;
   background-position: center;
   margin-right: auto;
@@ -629,18 +640,22 @@ footer i:hover {
   section:not(#hero, .small-section, .page-title, .page-title-next) {
     padding: 90px 0;
   }
-
-  .page-title-next {
-    margin-top: -180px;
-    padding: 270px 0 90px;
-  } 
-
+  
   .page-title .bg {
     height: calc(100% - 180px);
   }
 
   .page-title h1 {
     padding-bottom: 48px;
+  }
+
+  .page-title-next {
+    margin-top: -180px;
+    padding: 270px 0 90px;
+  } 
+
+  .page-title-next.center p {
+    width: 100%;
   }
 
   .small-section {

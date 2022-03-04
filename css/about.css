@@ -1,13 +1,5 @@
-#our-story {
-  text-align: center;
-}
-
-#our-story p {
-  width: 50%;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 2rem;
+.tilting-image {
+  background-image: url('../images/hero-bg-1.jpg');
 }
 
 .team-info {
