@@ -234,6 +234,9 @@ section:not(#hero, .small-section, .page-title, .page-title-next) {
   position: absolute;
   width: 100vw;
   height: calc(100% - 200px);
+}
+
+.lines-bg {
   background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
 }
 

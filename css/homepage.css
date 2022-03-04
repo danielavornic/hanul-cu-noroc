@@ -49,10 +49,6 @@ h1 {
 }
 
 /* about section */
-#about {
-  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
-}
-
 .about-images {
   display: flex;
   justify-content: flex-start;
@@ -135,10 +131,6 @@ h1 {
 }
 
 /* gallery section */
-#gallery {
-  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
-}
-
 #slider {
   position: relative;
   display: flex;
@@ -224,10 +216,6 @@ h1 {
 }
 
 /* reviews section */
-#reviews {
-  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
-}
-
 #reviews .section-heading {
   text-align: center;
 }
