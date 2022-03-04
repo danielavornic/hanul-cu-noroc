@@ -1,0 +1,21 @@
+.tilting-image {
+  background-image: url('../images/hero-bg-2.jpg');
+}
+
+#accomodation .row {
+  align-items: center;
+}
+
+#accomodation p:first-child {
+  margin-top: 0;
+}
+
+#accomodation iframe {
+  margin-top: 48px;
+}
+
+@media all and (max-width: 575px) {
+  #accomodation iframe {
+    margin-top: 24px;
+  }
+}
