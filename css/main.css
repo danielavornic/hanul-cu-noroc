@@ -359,7 +359,6 @@ nav {
 
 nav.transparent:not(.sticky) {
   background-color: transparent;
-  box-shadow: none;
 }
 
 nav.hidden {
@@ -738,7 +737,7 @@ footer i:hover {
   }
 
   #booking .underlined-link {
-    display: block;
+    display: table;
     margin: 0 auto;
   }
 }
