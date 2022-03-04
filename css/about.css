@@ -1,8 +1,3 @@
-.page-title .bg {
-  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
-}
-
-/* our story section */
 #our-story {
   text-align: center;
 }
@@ -15,8 +10,61 @@
   margin-bottom: 2rem;
 }
 
+.team-info {
+  margin-top: 1rem;
+}
+
+.team-image {
+  width: 50%;
+  height: 400px;
+  float: left;
+  margin-right: -100%;
+  background-image: url('https://via.placeholder.com/1000x400');
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.team-image:hover {
+  position: relative;
+  z-index: 1;
+}
+
+.team-text {
+  width: 60%;
+  padding: 48px;
+  float: right;
+  margin-top: 70px;
+  background-color: var(--beige);
+  z-index: 0;
+}
+
 @media all and (max-width: 768px) {
   #our-story p {
     width: 100%;
+  }
+
+  .team-image {
+    width: 100%;
+    margin-right: 0;
+    float: unset;
+  }
+
+  .team-text {
+    width: calc(100% - 182px);
+    margin: -48px auto 0 auto;
+    float: unset;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .team-image {
+    height: 200px;
+  }
+
+  .team-text {
+    padding: 24px;
+    width: calc(100% - 48px);
+    margin-top: 24px;
   }
 }
