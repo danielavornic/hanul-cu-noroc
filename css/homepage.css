@@ -30,7 +30,7 @@
 
 h1 {
   color: white;
-  font-size: 120px;
+  font-size: 140px;
 }
 
 .subheading-main {
@@ -381,6 +381,10 @@ h1 {
 
 /* media queries */
 @media all and (max-width: 1400px) {
+  h1 {
+    font-size: 120px;
+  }
+
   .about-images .img-container {
     width: 240px;
   }
