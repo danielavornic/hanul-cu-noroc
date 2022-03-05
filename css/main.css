@@ -122,6 +122,10 @@ p {
   margin-bottom: 48px;
 }
 
+.section-heading.center {
+  text-align: center;
+}
+
 .section-heading h2 {
   margin-bottom: 0;
 }
@@ -234,10 +238,13 @@ section:not(#hero, .small-section, .page-title, .page-title-next) {
   background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
 }
 
+.beige-bg {
+  background-color: var(--beige);
+}
+
 .page-title-next {
   margin-top: -200px;
   padding: 340px 0 140px;
-  background-color: var(--beige);
 }
 
 .page-title-next.center {

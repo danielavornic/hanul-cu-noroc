@@ -77,14 +77,6 @@ h1 {
 }
 
 /* services section */
-#services {
-  background-color: var(--beige);
-}
-
-#services h2, #services .subheading {
-  text-align: center;
-}
-
 .service-box {
   padding: 48px;
   border: 1px solid var(--light-gray);
@@ -216,12 +208,7 @@ h1 {
 }
 
 /* reviews section */
-#reviews .section-heading {
-  text-align: center;
-}
-
 .review-box {
-  background-color: var(--beige);
   padding: 48px;
   transition: 0.3s;
   position: relative;
