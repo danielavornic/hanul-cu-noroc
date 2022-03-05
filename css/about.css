@@ -20,6 +20,11 @@
 .team-image:hover {
   position: relative;
   z-index: 1;
+  box-shadow: 0 0 14px rgb(0 0 0 / 5%);
+}
+
+.team-image:hover + .team-text{
+  box-shadow: none;
 }
 
 .team-text {
@@ -27,8 +32,8 @@
   padding: 48px;
   float: right;
   margin-top: 70px;
-  background-color: var(--beige);
   z-index: 0;
+  box-shadow: 0 0 14px rgb(0 0 0 / 5%);
 }
 
 @media all and (max-width: 768px) {
