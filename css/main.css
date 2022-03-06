@@ -214,7 +214,7 @@ p {
 }
 
 /* sections related */
-section:not(#hero, .small-section, .page-title, .page-title-next) {
+section:not(#hero, .small-section, .page-title, .page-title-next, #map) {
   padding: 140px 0;
 }
 
@@ -294,6 +294,11 @@ section:not(#hero, .small-section, .page-title, .page-title-next) {
 .read-more-container {
   text-align: right;
   margin-top: 48px;
+}
+
+iframe {
+  border: 0;
+  width: 100%;
 }
 
 /* loader */
@@ -644,7 +649,7 @@ footer i:hover {
 }
 
 @media all and (max-width: 768px) {
-  section:not(#hero, .small-section, .page-title, .page-title-next) {
+  section:not(#hero, .small-section, .page-title, .page-title-next, #map) {
     padding: 90px 0;
   }
   
