@@ -495,6 +495,10 @@ h1 {
   #slider {
     grid-template-columns: 1fr;
   }
+
+  .service-box {
+    padding: 36px;
+  }
 }
 
 @media all and (max-width: 425px) {
