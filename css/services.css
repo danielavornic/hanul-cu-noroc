@@ -28,7 +28,7 @@ ul {
   justify-content: center;
 }
 
-#nav-tabs li span {
+.nav-tab span {
   margin: 0 18px;
   padding: 6px 18px;
   color: var(--green);
@@ -37,10 +37,16 @@ ul {
   transition: 0.3s;
 }
 
-#nav-tabs li:hover span,
-#nav-tabs li.active span {
+.nav-tab:hover span,
+.nav-tab.active span {
   background-color: var(--green);
   color: var(--beige);
+}
+
+.nav-tab i {
+  font-size: 16px;
+  margin-right: 4px;
+  vertical-align: 1px;
 }
 
 #tabs {

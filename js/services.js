@@ -1,10 +1,10 @@
 $(function () {
-  $('#nav-tabs li:first-child').addClass('active');
+  $('.nav-tab:first-child').addClass('active');
   $('.tab').hide();
   $('.tab:first-child').show();
 
-  $('#nav-tabs li').click(function () {
-    $('#nav-tabs li').removeClass('active');
+  $('.nav-tab').click(function () {
+    $('.nav-tab').removeClass('active');
     $(this).addClass('active');
     $('.tab').hide();
     const activeTab = $(this).find('span').attr('data-tab');
