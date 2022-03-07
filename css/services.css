@@ -1,5 +1,5 @@
 .tilting-image {
-  background-image: url('../images/hero-bg-2.jpg');
+  background-image: url('../images/yard-3.jpg');
 }
 
 /* accomodation section */
@@ -91,7 +91,7 @@ ul {
 }
 
 .activity-box:hover {
-  box-shadow: 0 0 14px rgb(0 0 0 / 2%);
+  box-shadow: 0 0 14px rgb(0 0 0 / 5%);
 }
 
 .activity-box img {

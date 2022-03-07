@@ -7,7 +7,7 @@
   align-items: center;
   color: white;
   text-align: center;
-	background-image: url('../images/hero-bg-1.jpg');
+	background-image: url('../images/houses-1.jpg');
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -268,101 +268,101 @@ h1 {
 @-webkit-keyframes heroBgAnimation {
   0%,
   12% {
-    background-image: url('../images/hero-bg-1.jpg'),
-      url('../images/hero-bg-2.jpg');
+    background-image: url('../images/houses-1.jpg'),
+      url('../images/yard-2.jpg');
   }
   25%,
   37% {
-    background-image: url('../images/hero-bg-2.jpg'),
-      url('../images/hero-bg-3.jpg');
+    background-image: url('../images/yard-2.jpg'),
+      url('../images/yard-3.jpg');
   }
   50%,
   62% {
-    background-image: url('../images/hero-bg-3.jpg'),
-      url('../images/hero-bg-4.jpg');
+    background-image: url('../images/yard-3.jpg'),
+      url('../images/swing-2.jpg');
   }
   75%,
   87% {
-    background-image: url('../images/hero-bg-4.jpg'),
-      url('../images/hero-bg-1.jpg');
+    background-image: url('../images/swing-2.jpg'),
+      url('../images/houses-1.jpg');
   }
   100% {
-    background-image: url('../images/hero-bg-1.jpg');
+    background-image: url('../images/houses-1.jpg');
   }
 }
 @-moz-keyframes heroBgAnimation {
   0%,
   12% {
-    background-image: url('../images/hero-bg-1.jpg'),
-      url('../images/hero-bg-2.jpg');
+    background-image: url('../images/houses-1.jpg'),
+      url('../images/yard-2.jpg');
   }
   25%,
   37% {
-    background-image: url('../images/hero-bg-2.jpg'),
-      url('../images/hero-bg-3.jpg');
+    background-image: url('../images/yard-2.jpg'),
+      url('../images/yard-3.jpg');
   }
   50%,
   62% {
-    background-image: url('../images/hero-bg-3.jpg'),
-      url('../images/hero-bg-4.jpg');
+    background-image: url('../images/yard-3.jpg'),
+      url('../images/swing-2.jpg');
   }
   75%,
   87% {
-    background-image: url('../images/hero-bg-4.jpg'),
-      url('../images/hero-bg-1.jpg');
+    background-image: url('../images/swing-2.jpg'),
+      url('../images/houses-1.jpg');
   }
   100% {
-    background-image: url('../images/hero-bg-1.jpg');
+    background-image: url('../images/houses-1.jpg');
   }
 }
 @-ms-keyframes heroBgAnimation {
   0%,
   12% {
-    background-image: url('../images/hero-bg-1.jpg'),
-      url('../images/hero-bg-2.jpg');
+    background-image: url('../images/houses-1.jpg'),
+      url('../images/yard-2.jpg');
   }
   25%,
   37% {
-    background-image: url('../images/hero-bg-2.jpg'),
-      url('../images/hero-bg-3.jpg');
+    background-image: url('../images/yard-2.jpg'),
+      url('../images/yard-3.jpg');
   }
   50%,
   62% {
-    background-image: url('../images/hero-bg-3.jpg'),
-      url('../images/hero-bg-4.jpg');
+    background-image: url('../images/yard-3.jpg'),
+      url('../images/swing-2.jpg');
   }
   75%,
   87% {
-    background-image: url('../images/hero-bg-4.jpg'),
-      url('../images/hero-bg-1.jpg');
+    background-image: url('../images/swing-2.jpg'),
+      url('../images/houses-1.jpg');
   }
   100% {
-    background-image: url('../images/hero-bg-1.jpg');
+    background-image: url('../images/houses-1.jpg');
   }
 }
 @keyframes heroBgAnimation {
   0%,
   12% {
-    background-image: url('../images/hero-bg-1.jpg'),
-      url('../images/hero-bg-2.jpg');
+    background-image: url('../images/houses-1.jpg'),
+      url('../images/yard-2.jpg');
   }
   25%,
   37% {
-    background-image: url('../images/hero-bg-2.jpg'),
-      url('../images/hero-bg-3.jpg');
+    background-image: url('../images/yard-2.jpg'),
+      url('../images/yard-3.jpg');
   }
   50%,
   62% {
-    background-image: url('../images/hero-bg-3.jpg'),
-      url('../images/hero-bg-4.jpg');
+    background-image: url('../images/yard-3.jpg'),
+      url('../images/swing-2.jpg');
   }
   75%,
   87% {
-    background-image: url('../images/hero-bg-4.jpg'),
-      url('../images/hero-bg-1.jpg');
+    background-image: url('../images/swing-2.jpg'),
+      url('../images/houses-1.jpg');
   }
   100% {
-    background-image: url('../images/hero-bg-1.jpg');
+    background-image: url('../images/houses-1.jpg');
   }
 }
 
