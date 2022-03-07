@@ -60,7 +60,10 @@ $(function () {
   if ($(window).scrollTop() > 0 && isScreenLg())
     nav.removeClass('sticky').addClass('hidden');
 
-  AOS.init();
+  AOS.init({
+    disable: 'mobile',
+    once: true
+  });
 
   if ($('.tilting-image').length)
     $('.tilting-image').tilt({
