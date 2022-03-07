@@ -80,15 +80,10 @@ h1 {
 .service-box {
   padding: 48px;
   border: 1px solid var(--light-gray);
-  transition: 0.3s;
 }
 
 .service-box:hover {
   box-shadow: 0 0 14px rgb(0 0 0 / 2%);
-  -ms-transform: translateY(-6px) !important;
-  -moz-transform: translateY(-6px) !important;
-  -webkit-transform: translateY(-6px) !important;
-  transform: translateY(-6px) !important;
 }
 
 .service-box a {
@@ -196,7 +191,6 @@ h1 {
   color: var(--green);
   font-size: 32px;
   margin-left: 4px;
-  transition: 0.3s;
 }
 
 #video .video-icon:hover {
@@ -210,7 +204,6 @@ h1 {
 /* reviews section */
 .review-box {
   padding: 48px;
-  transition: 0.3s;
   position: relative;
 }
 
