@@ -82,6 +82,25 @@
         </div>
       </nav>
     </header>
+
+    <div class="lightbox-wrapper">
+      <div class="lightbox-bg"></div>
+      <div class="lightbox-container">
+        <div class="lightbox-content">
+          <img src="images/houses-1.jpg" alt="Hanul cu Noroc camere exterior">
+        </div>
+      </div>
+      <button type="button" class="close-btn tr" title="Închide">
+        <i class="icofont-close-line"></i>
+      </button>
+      <button type="button" class="arrow-btn prev-btn tr" title="Imaginea anterioară">
+        <i class="icofont-thin-left"></i>
+      </button>
+      <button type="button" class="arrow-btn next-btn tr" title="Imaginea următoare">
+        <i class="icofont-thin-right"></i>
+      </button>
+    </div>
+
     <div id="wrapper">
       <section class="parallax lines-bg">
         <div class="container">
@@ -90,7 +109,7 @@
           </div>
         </div>
         <div class="container-fluid">
-          <div id="gallery-grid">
+          <div id="gallery-grid" data-aos="fade-up" data-aos-duration="400">
             <div class="item">
               <img src="images/houses-1.jpg" alt="Hanul cu Noroc camere exterior" />
             </div>
@@ -179,8 +198,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/services.js"></script>
+    <script src="js/gallery.js"></script>
   </body>
 </html>
