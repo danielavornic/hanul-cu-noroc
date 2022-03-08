@@ -536,23 +536,23 @@ nav.transparent:not(.sticky) .nav-item a {
   transform: rotate(45deg) translateY(-50%);
 }
 
-/* booking section */
-#booking {
-  background-color: var(--dark-green);
-}
-
-#booking h2 {
-  color: white;
-}
-
-#booking .btn {
-  margin-right: 24px;
-}
-
 /* footer */
 footer {
   background-color: var(--black);
-  padding: 24px 0;
+  padding-bottom: 24px;
+}
+
+.cta {
+  background-color: var(--dark-green);
+  margin-bottom: 24px;
+}
+
+.cta h2 {
+  color: white;
+}
+
+.cta .btn {
+  margin-right: 24px;
 }
 
 footer .row {
@@ -764,17 +764,17 @@ footer i:hover {
     margin: 18px 0;
   }
 
-  #booking h2 {
+  .cta h2 {
     text-align: center;
   }
 
-  #booking .btn {
+  .cta .btn {
     display: block;
     margin: 0 auto 24px;
     width: fit-content;
   }
 
-  #booking .underlined-link {
+  .cta .underlined-link {
     display: table;
     margin: 0 auto;
   }
@@ -804,5 +804,9 @@ footer i:hover {
 
   .read-more-container {
     margin-top: 36px;
+  }
+
+  .cta .btn {
+    width: calc(100% - 98px);
   }
 }

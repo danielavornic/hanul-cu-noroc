@@ -485,16 +485,6 @@ h1 {
     margin-bottom: 18px;
   }
 
-  #slider {
-    grid-template-columns: 1fr;
-  }
-
-  .service-box {
-    padding: 36px;
-  }
-}
-
-@media all and (max-width: 425px) {
   .about-images {
     flex-direction: column;
   }
@@ -508,7 +498,15 @@ h1 {
     display: none;
   }
 
-  #about .btn, #booking .btn {
+  #about .btn {
     width: calc(100% - 98px);
+  }
+
+  #slider {
+    grid-template-columns: 1fr;
+  }
+
+  .service-box {
+    padding: 36px;
   }
 }
