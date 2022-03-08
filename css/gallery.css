@@ -6,14 +6,12 @@
 }
 
 #gallery-grid .item {
-  margin-bottom: 30px;
-  display: table-row; 
-  vertical-align: top;
+  display: block;
+  margin-bottom: 24px; 
 }
 
 #gallery-grid .item img {
   width: 100%;
-  margin-bottom: 24px;
   box-shadow: 0 0 14px rgb(0 0 0 / 5%);
   cursor: pointer;
 }
