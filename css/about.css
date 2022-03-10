@@ -48,7 +48,7 @@
   }
 
   .team-text {
-    width: calc(100% - 182px);
+    width: calc(100% - 96px);
     margin: -48px auto 0 auto;
     float: unset;
   }
@@ -61,7 +61,7 @@
 
   .team-text {
     padding: 24px;
-    width: calc(100% - 48px);
+    width: 100%;
     margin-top: 24px;
   }
 }

@@ -19,6 +19,10 @@
     url('../fonts/Butler.svg') format('svg');
 }
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -545,7 +549,6 @@ footer {
 
 .cta {
   background-color: var(--dark-green);
-  margin-bottom: 24px;
 }
 
 .cta h2 {
@@ -554,6 +557,11 @@ footer {
 
 .cta .btn {
   margin-right: 24px;
+}
+
+footer > .container {
+  padding-top: 24px;
+  align-items: center;
 }
 
 footer .row {
@@ -713,9 +721,9 @@ footer i:hover {
   #menu {
     position: fixed;
     top: 78px;
-    width: 50%;
+    width: 60%;
     right: 0;
-    height: calc(100vh - 151px);
+    height: 100vh;
     padding: 36px 28px;
     flex-direction: column;
     justify-content: flex-start;
@@ -800,7 +808,7 @@ footer i:hover {
   }
 
   .section-heading {
-    margin-bottom: 64px;
+    margin-bottom: 56px;
   }
 
   .read-more-container {
@@ -808,6 +816,6 @@ footer i:hover {
   }
 
   .cta .btn {
-    width: calc(100% - 98px);
+    width: 100%;
   }
 }

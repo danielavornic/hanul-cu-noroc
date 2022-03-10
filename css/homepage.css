@@ -499,7 +499,7 @@ h1 {
   }
 
   #about .btn {
-    width: calc(100% - 98px);
+    width: 100%;
   }
 
   #slider {
