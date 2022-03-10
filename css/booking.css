@@ -1,0 +1,45 @@
+.tilting-image {
+  background-image: url('../images/houses-1.jpg');
+}
+
+.form-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  background-color: var(--beige);
+  border: 1px solid var(--light-gray);
+  padding: 10px 15px;
+  margin: 0 0 15px 0;
+  width: 100%;
+  resize: none;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid var(--green);
+  outline: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+label .asterisk {
+  color: red;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  cursor: pointer;
+}
