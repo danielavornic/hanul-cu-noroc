@@ -232,6 +232,7 @@ section:not(#hero, .small-section, .page-title, .page-title-next, #map) {
   position: absolute;
   width: 100vw;
   height: calc(100% - 200px);
+  z-index: -2;
 }
 
 .lines-bg {
