@@ -6,7 +6,7 @@ $(function () {
   const menuLogo = $('.menu-center .logo').first();
   const topBar = $('.top-bar');
   const nav = $('nav').first();
-  const wrapper = $('#wrapper');
+  const scrollTop = $('#scroll-top');
   let prevSt = 0;
 
   const isScreenLg = () => window.matchMedia('(min-width: 769px)').matches;
@@ -56,6 +56,7 @@ $(function () {
   menuIcon.click(toggleMenu);
   $(window).on('resize', toggleMenuOnResize);
   $(window).scroll(toggleNavOnScroll);
+  scrollTop.click(() => $(window).scrollTop(0))
 
   if ($(window).scrollTop() > 0 && isScreenLg())
     nav.removeClass('sticky').addClass('hidden');
