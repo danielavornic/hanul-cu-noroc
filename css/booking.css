@@ -54,3 +54,7 @@ label .asterisk {
   display: none;
   text-align: center;
 }
+
+#submit-message p {
+  margin-top: 0;
+}
