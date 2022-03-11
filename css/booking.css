@@ -22,11 +22,17 @@ input, textarea {
   margin: 0 0 15px 0;
   width: 100%;
   resize: none;
+  line-height: normal;
   transition: 0.3s;
 }
 
 input:focus, textarea:focus {
   border: 1px solid var(--green);
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid red;
   outline: none;
 }
 
@@ -39,7 +45,12 @@ label .asterisk {
   color: red;
 }
 
-form button[type="submit"] {
+#submit-btn {
   width: 100%;
   cursor: pointer;
+}
+
+#submit-message {
+  display: none;
+  text-align: center;
 }
