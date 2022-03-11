@@ -660,6 +660,10 @@ footer i:hover {
   .nav-item:last-child {
     margin: 0 0 0 14px;
   }
+
+  .page-title-next.center p {
+    width: 100%;
+  }
 }
 
 @media all and (min-width: 769px) and (max-width: 990px) {
@@ -685,10 +689,6 @@ footer i:hover {
     margin-top: -180px;
     padding: 270px 0 90px;
   } 
-
-  .page-title-next.center p {
-    width: 100%;
-  }
 
   .small-section {
     padding: 45px 0;
