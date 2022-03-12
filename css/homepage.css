@@ -11,9 +11,6 @@
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-transform: translate3d(0, 0, 0);
-	-webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   -ms-animation: heroBgAnimation 24s ease-in-out infinite 0s;
   -moz-animation: heroBgAnimation 24s ease-in-out infinite 0s;
   -webkit-animation: heroBgAnimation 24s ease-in-out infinite 0s;  
@@ -25,7 +22,6 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.55);
-  z-index: -2;
 }
 
 h1 {
