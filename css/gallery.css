@@ -100,6 +100,14 @@
   margin-left: 3px;
 }
 
+.images-attribution {
+  margin-top: 2rem;
+}
+
+.images-attribution p {
+  margin-bottom: 0;
+}
+
 /* media queries */
 @media all and (max-width: 1400px) {
   .lightbox-content img {
@@ -123,5 +131,10 @@
 @media all and (max-width: 575px) {
   #gallery-grid {
     column-count: 1;
+  }
+
+  .images-attribution {
+    margin-top: 0;
+    text-align: center;
   }
 }
