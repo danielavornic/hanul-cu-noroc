@@ -547,15 +547,15 @@ footer {
   padding-bottom: 24px;
 }
 
-.cta {
+#cta {
   background-color: var(--dark-green);
 }
 
-.cta h2 {
+#cta h2 {
   color: white;
 }
 
-.cta .btn {
+#cta .btn {
   margin-right: 24px;
 }
 
@@ -721,7 +721,7 @@ footer i:hover {
   #menu {
     position: fixed;
     top: 78px;
-    width: 60%;
+    width: 70%;
     right: 0;
     height: 100vh;
     padding: 36px 28px;
@@ -773,17 +773,17 @@ footer i:hover {
     margin: 18px 0;
   }
 
-  .cta h2 {
+  #cta h2 {
     text-align: center;
   }
 
-  .cta .btn {
+  #cta .btn {
     display: block;
     margin: 0 auto 24px;
     width: fit-content;
   }
 
-  .cta .underlined-link {
+  #cta .underlined-link {
     display: table;
     margin: 0 auto;
   }
@@ -815,7 +815,7 @@ footer i:hover {
     margin-top: 36px;
   }
 
-  .cta .btn {
+  #cta .btn {
     width: 100%;
   }
 }

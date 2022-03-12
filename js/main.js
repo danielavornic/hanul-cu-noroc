@@ -7,6 +7,7 @@ $(function () {
   const topBar = $('.top-bar');
   const nav = $('nav').first();
   const scrollTop = $('#scroll-top');
+  const wrapper = $('#wrapper');
   let prevSt = 0;
 
   const isScreenLg = () => window.matchMedia('(min-width: 769px)').matches;
@@ -56,14 +57,14 @@ $(function () {
   menuIcon.click(toggleMenu);
   $(window).on('resize', toggleMenuOnResize);
   $(window).scroll(toggleNavOnScroll);
-  scrollTop.click(() => $(window).scrollTop(0))
+  scrollTop.click(() => $(window).scrollTop(0));
 
   if ($(window).scrollTop() > 0 && isScreenLg())
     nav.removeClass('sticky').addClass('hidden');
 
   AOS.init({
     disable: 'mobile',
-    once: true
+    once: true,
   });
 
   if ($('.tilting-image').length)
