@@ -84,6 +84,7 @@ h1 {
 .service-box {
   padding: 48px;
   border: 1px solid var(--light-gray);
+  transition: 0.3s;
 }
 
 .service-box:hover {
@@ -153,7 +154,7 @@ h1 {
   opacity: 0.5;
 }
 
-.transition {
+.slide-transition {
   transition: 0.7s;
 }
 
@@ -195,6 +196,7 @@ h1 {
   color: var(--green);
   font-size: 32px;
   margin-left: 4px;
+  transition: 0.3s;
 }
 
 #video .video-icon:hover {
@@ -209,6 +211,7 @@ h1 {
 .review-box {
   padding: 48px;
   position: relative;
+  transition: 0.3s;
 }
 
 .review-box:hover {

@@ -4,12 +4,12 @@ $(function () {
 
   const shiftSlide = () => {
     slider
-      .addClass('transition')
+      .addClass('slide-transition')
       .css('transform', `translateX(-${slideWidth}px)`);
 
     setTimeout(() => {
       $('.slide:last').after($('.slide:first'));
-      slider.removeClass('transition').css('transform', 'translateX(0px)');
+      slider.removeClass('slide-transition').css('transform', 'translateX(0px)');
     }, 700);
   };
 

@@ -277,10 +277,6 @@ section:not(#hero, .small-section, .page-title, .page-title-next, #map) {
 	filter: blur(4px);
 }
 
-.tr {
-  transition: 0.3s;
-}
-
 .up-on-hover:hover {
   -ms-transform: translateY(-6px) !important;
   -moz-transform: translateY(-6px) !important;
