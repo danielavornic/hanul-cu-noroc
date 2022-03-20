@@ -20,11 +20,14 @@ $(function () {
     wrapper.toggleClass('blur');
   };
 
+  // in case you test using the browser developer tools and resize the window from there :3
   const toggleMenuOnResize = () => {
+    console.log('lol');
     if (isScreenLg()) {
       menu.css('margin-right', 0);
       wrapper.removeClass('blur');
     } else {
+      nav.removeClass('hidden');
       if (menu.hasClass('hidden')) {
         menu.css('margin-right', '-100%');
         wrapper.removeClass('blur');
