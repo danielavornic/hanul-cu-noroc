@@ -1,5 +1,5 @@
 .tilting-image {
-  background-image: url('../images/yard-3.jpg');
+  background-image: url('../images/yard-2.jpg');
 }
 
 /* accomodation section */
@@ -73,6 +73,8 @@ ul {
 .meal-img {
   margin-right: 18px;
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
 .meal .small-text {
