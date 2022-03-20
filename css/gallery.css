@@ -8,6 +8,11 @@
 #gallery-grid .item {
   display: block;
   margin-bottom: 24px; 
+  transition: 0.3s;
+}
+
+#gallery-grid .item:hover{
+  opacity: 0.9;
 }
 
 #gallery-grid .item img {
