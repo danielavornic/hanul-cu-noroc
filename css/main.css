@@ -363,10 +363,6 @@ header .row {
   color: var(--light-gray);
 }
 
-.top-bar .socials-data a:first-child {
-  margin-right: 12px;
-}
-
 .top-bar .contact-data a:first-child {
   margin-right: 16px;
 }
@@ -585,10 +581,6 @@ footer i:hover {
 
 .social-media {
   text-align: right;
-}
-
-.social-media a:first-child {
-  margin-right: 16px;
 }
 
 .disclaimer {
