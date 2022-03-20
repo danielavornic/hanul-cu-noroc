@@ -218,8 +218,12 @@ p {
 }
 
 /* sections related */
-section:not(#hero, .small-section, .page-title, .page-title-next, #map) {
+section:not(.small-section, .page-title, .page-title-next, .no-padding) {
   padding: 140px 0;
+}
+
+section.no-padding {
+  padding: 0;
 }
 
 .small-section {
@@ -669,7 +673,7 @@ footer i:hover {
 }
 
 @media all and (max-width: 768px) {
-  section:not(#hero, .small-section, .page-title, .page-title-next, #map) {
+  section:not(.small-section, .page-title, .page-title-next, .no-padding)  {
     padding: 90px 0;
   }
   
