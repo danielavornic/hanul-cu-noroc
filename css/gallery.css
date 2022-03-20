@@ -79,9 +79,10 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  outline: none;
 }
 
-.lightbox-wrapper .arrow-btn:hover {
+.lightbox-wrapper .arrow-btn:hover, .lightbox-wrapper .arrow-btn.pressed {
   background-color: var(--dark-green);
 }
 
