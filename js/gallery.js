@@ -14,6 +14,22 @@ $(function () {
     lbImg.attr({ src: `../${imgSrc}`, alt: imgAlt });
   };
 
+  const shiftLbImg = (isRightDir) => {
+    const currImg = lbImg.attr('src').substr(3);
+    const currItem = $('#gallery-grid').find(`img[src$='${currImg}']`).parent();
+    const prssedBtn = isRightDir ? $('.next-btn') : $('.prev-btn');
+    let nextItem = isRightDir ? currItem.next() : currItem.prev();
+    if (nextItem.length == 0)
+      nextItem = isRightDir ? galleryItem.first() : galleryItem.last();
+
+    setTimeout(() => {
+      setLbImg(nextItem.find('>:first-child'));
+      $('.arrow-btn').removeClass('pressed');
+    }, 200);
+    lbImg.fadeOut(200).fadeIn(200);
+    prssedBtn.addClass('pressed');
+  };
+
   $('.close-btn').click(hideLightbox);
 
   $('.lightbox-container').click((e) => {
@@ -28,16 +44,17 @@ $(function () {
     }
   });
 
-  $('.arrow-btn').click((e) => {
-    const currImg = lbImg.attr('src').substr(3);
-    const currItem = $('#gallery-grid').find(`img[src$='${currImg}']`).parent();
-    const isNext = $(e.target).hasClass('next-btn' || 'icofont-thin-right');
-    let nextItem = isNext ? currItem.next() : currItem.prev();
-    if (nextItem.length == 0)
-      nextItem = isNext ? galleryItem.first() : galleryItem.last();
+  $(document).keydown((e) => {
+    const isArrowKeyPressed = e.which === 39 || e.which === 37;
+    if (lbWrapper.css('display') === 'block' && isArrowKeyPressed)
+      shiftLbImg(e.which === 39);
+  });
 
-    setTimeout(() => setLbImg(nextItem.find('>:first-child')), 200);
-    lbImg.fadeOut(200).fadeIn(200);
+  $('.arrow-btn').click((e) => {
+    const isNextBtnPressed = $(e.target).hasClass(
+      'next-btn' || 'icofont-thin-right'
+    );
+    shiftLbImg(isNextBtnPressed);
   });
 
   hideLightbox();
