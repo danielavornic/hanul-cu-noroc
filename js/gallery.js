@@ -32,7 +32,7 @@ $(function () {
 
   $('.close-btn').click(hideLightbox);
 
-  $('.lightbox-container').click((e) => {
+  $('.lightbox-container').click(function (e) {
     if ($(e.target).hasClass('lightbox-container')) hideLightbox();
   });
 
@@ -44,13 +44,13 @@ $(function () {
     }
   });
 
-  $(document).keydown((e) => {
+  $(document).keydown(function (e) {
     const isArrowKeyPressed = e.which === 39 || e.which === 37;
     if (lbWrapper.css('display') === 'block' && isArrowKeyPressed)
       shiftLbImg(e.which === 39);
   });
 
-  $('.arrow-btn').click((e) => {
+  $('.arrow-btn').click(function () {
     const isNextBtnPressed = $(e.target).hasClass(
       'next-btn' || 'icofont-thin-right'
     );
