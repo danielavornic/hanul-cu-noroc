@@ -44,7 +44,7 @@ $(function () {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    submitBtn.attr('disabled', true);
+    submitBtn.attr('disabled', true).css('cursor', 'not-allowed');
 
     const form = e.target;
     const url = form.action;
