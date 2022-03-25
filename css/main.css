@@ -244,7 +244,7 @@ section.no-padding {
 }
 
 .lines-bg {
-  background-image: url('https://copperrock.com/wp-content/themes/copperrock/img/lines2.svg');
+  background-image: url('../images/lines-bg.svg');
 }
 
 .beige-bg {
