@@ -50,7 +50,7 @@ $(function () {
       shiftLbImg(e.which === 39);
   });
 
-  $('.arrow-btn').click(function () {
+  $('.arrow-btn').click(function (e) {
     const isNextBtnPressed = $(e.target).hasClass(
       'next-btn' || 'icofont-thin-right'
     );
