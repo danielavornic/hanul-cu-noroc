@@ -3,7 +3,6 @@ $(function () {
   const minDate = new Date().toLocaleDateString('en-ca');
   const checkIn = $('#check-in');
   const checkOut = $('#check-out');
-
   checkIn.attr('min', minDate);
   checkOut.attr('min', minDate);
   checkIn.change(() => checkOut.attr('min', checkIn.val()));
@@ -28,6 +27,7 @@ $(function () {
           : null
       )
       .filter((item, pos, self) => self.indexOf(item) == pos && item);
+
     let formData = {
       formDataNameOrder: JSON.stringify(fields),
       formGoogleSheetName: form.dataset.sheet || 'responses',
@@ -44,7 +44,7 @@ $(function () {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    submitBtn.attr('disabled', true).css('cursor', 'not-allowed');
+    submitBtn.prop('disabled', true).css('cursor', 'not-allowed');
 
     const form = e.target;
     const url = form.action;
@@ -69,25 +69,28 @@ $(function () {
     xhr.send(encoded);
   };
 
-  const changeInputBorderColor = (e) =>
-    $(e.target).css(
-      'border-color',
-      e.target.checkValidity() ? 'var(--green)' : 'red'
-    );
+  const isInputValid = (element) => {
+    if (element.id === 'telefon')
+      return $(element)
+        .val()
+        .match(/^0\d{8}$/);
 
-  const changeInputsBorderColor = () => {
-    inputs.each((i) => {
-      inputs
-        .eq(i)
-        .css(
-          'border-color',
-          inputs[i].checkValidity() ? 'var(--light-gray)' : 'red'
-        );
-    });
+    return element.checkValidity();
   };
 
+  const changeInputBorderColor = (element) => {
+    if (isInputValid(element)) {
+      $(element).removeClass('invalid');
+    } else {
+      $(element).addClass('invalid');
+    }
+  };
+
+  const changeInputsBorderColor = () =>
+    inputs.each((i) => changeInputBorderColor(inputs.eq(i)[0]));
+
   submitMess.hide();
-  inputs.keydown(changeInputBorderColor).change(changeInputBorderColor);
+  inputs.on('keydown input focus', (e) => changeInputBorderColor(e.target));
   submitBtn.click(changeInputsBorderColor);
   $('form').submit(handleFormSubmit);
 });
