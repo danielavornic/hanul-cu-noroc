@@ -4,10 +4,11 @@ $(function () {
   $('.tab:first-child').show();
 
   $('.nav-tab').click(function () {
+    const activeTab = $(this).find('span').attr('data-tab');
+    
+    $('.tab').hide();
     $('.nav-tab').removeClass('active');
     $(this).addClass('active');
-    $('.tab').hide();
-    const activeTab = $(this).find('span').attr('data-tab');
     $(activeTab).fadeIn();
   });
 });

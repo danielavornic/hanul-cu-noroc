@@ -1,4 +1,3 @@
-/* hero section */
 #hero {
   width: 100vw;
   height: 100vh;
@@ -18,18 +17,6 @@
   -moz-animation: heroBgAnimation 24s ease-in-out infinite 0s;
   -webkit-animation: heroBgAnimation 24s ease-in-out infinite 0s;  
   animation: heroBgAnimation 24s ease-in-out infinite 0s;
-}
-
-.darker-bg {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.55);
-  z-index: 0;
-}
-
-.darker-bg + div {
-  z-index: 1;
 }
 
 h1 {
@@ -52,7 +39,6 @@ h1 {
   margin-right: 18px;
 }
 
-/* about section */
 .about-images {
   display: flex;
   justify-content: flex-start;
@@ -80,7 +66,6 @@ h1 {
   margin-top: 1.5rem;
 }
 
-/* services section */
 .service-box {
   padding: 48px;
   border: 1px solid var(--light-gray);
@@ -122,7 +107,6 @@ h1 {
   padding-top: 24px;
 }
 
-/* gallery section */
 #slider {
   position: relative;
   display: flex;
@@ -158,7 +142,6 @@ h1 {
   transition: 0.7s;
 }
 
-/* video section */
 #video {
   background-image: url('../images/video-bg.jpg');
   position: relative;
@@ -185,7 +168,7 @@ h1 {
   align-items: center;
   z-index: 1;
   border-radius: 50%;
-  box-shadow: 0 0 0 0 var(--snow);
+  box-shadow: 0 0 0 0 white;
   -ms-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
   -moz-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
   -webkit-animation: pulse 1.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -207,7 +190,6 @@ h1 {
   color: var(--dark-green);
 }
 
-/* reviews section */
 .review-box {
   padding: 48px;
   position: relative;
@@ -271,7 +253,6 @@ h1 {
   color: var(--yellow);
 }
 
-/* animation for background images of hero section */
 @-webkit-keyframes heroBgAnimation {
   0%,
   12% {
@@ -373,13 +354,11 @@ h1 {
   }
 }
 
-/* animation for pulsting video button */
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 @keyframes pulse {to {box-shadow: 0 0 0 30px rgba(61, 232, 75, 0);}}
 
-/* media queries */
 @media all and (max-width: 1400px) {
   h1 {
     font-size: 120px;
@@ -450,7 +429,7 @@ h1 {
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
   #hero, #video {
     background-attachment: scroll;
   }

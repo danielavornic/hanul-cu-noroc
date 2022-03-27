@@ -1,4 +1,3 @@
-/* gallery grid */
 #gallery-grid {
   column-count: 3;
   column-gap: 24px;
@@ -11,7 +10,7 @@
   transition: 0.3s;
 }
 
-#gallery-grid .item:hover{
+#gallery-grid .item:hover {
   opacity: 0.9;
 }
 
@@ -21,13 +20,12 @@
   cursor: pointer;
 }
 
-/* lightbox */
-.lightbox-wrapper {
+.lightbox-container {
+  display: none;
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  position: fixed;
   z-index: 200;
-  display: none;
 }
 
 .lightbox-bg {
@@ -37,7 +35,7 @@
   opacity: 0.8;
 }
 
-.lightbox-container {
+.lightbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,14 +46,14 @@
   align-items: center;
 }
 
-.lightbox-content img {
+.lightbox-img img {
   width: 100%;
   max-width: 1150px;
   max-height: calc(100vh - 96px);
   box-shadow: 0 0 14px rgb(0 0 0 / 3%);
 }
 
-.lightbox-wrapper button {
+.lightbox-container button {
   position: absolute;
   color: white;
   background: none;
@@ -64,21 +62,21 @@
   transition: 0.3s;
 }
 
-.lightbox-wrapper button i {
+.lightbox-container button i {
   font-size: 24px;
 }
 
-.lightbox-wrapper .close-btn {
+.lightbox-container .close-btn {
   right: 36px;
   top: 36px;
   z-index: 201;
 }
 
-.lightbox-wrapper .close-btn:hover {
+.lightbox-container .close-btn:hover {
   opacity: 0.8;
 }
 
-.lightbox-wrapper .arrow-btn {
+.lightbox-container .arrow-btn {
   top: calc(50% - 30px);
   background-color: var(--green);
   width: 60px;
@@ -87,23 +85,23 @@
   outline: none;
 }
 
-.lightbox-wrapper .arrow-btn:hover, .lightbox-wrapper .arrow-btn.pressed {
+.lightbox-container .arrow-btn:hover, .lightbox-container .arrow-btn.pressed {
   background-color: var(--dark-green);
 }
 
-.lightbox-wrapper .prev-btn {
+.lightbox-container .prev-btn {
   left: 36px;
 }
 
-.lightbox-wrapper .next-btn {
+.lightbox-container .next-btn {
   right: 36px;
 }
 
-.lightbox-wrapper .prev-btn i {
+.lightbox-container .prev-btn i {
   margin-right: 3px;
 }
 
-.lightbox-wrapper .next-btn i {
+.lightbox-container .next-btn i {
   margin-left: 3px;
 }
 
@@ -115,15 +113,14 @@
   margin-bottom: 0;
 }
 
-/* media queries */
 @media all and (max-width: 1400px) {
-  .lightbox-content img {
+  .lightbox-img img {
     max-width: 1000px;
   }
 }
 
 @media all and (max-width: 1200px) {
-  .lightbox-content img {
+  .lightbox-img img {
     max-width: 750px;
   }
 }

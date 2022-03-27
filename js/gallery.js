@@ -1,18 +1,15 @@
 $(function () {
-  const lbWrapper = $('.lightbox-wrapper');
-  const lbImg = $('.lightbox-content img');
+  const lbContainer = $('.lightbox-container');
+  const lbImg = $('.lightbox-img img');
   const galleryItem = $('#gallery-grid .item');
 
   const hideLightbox = () => {
-    lbWrapper.fadeOut();
+    lbContainer.fadeOut();
     $('html').css('overflow-y', 'auto');
   };
 
-  const setLbImg = (img) => {
-    const imgSrc = img.attr('src');
-    const imgAlt = img.attr('alt');
-    lbImg.attr({ src: `../${imgSrc}`, alt: imgAlt });
-  };
+  const setLbImg = (img) =>
+    lbImg.attr({ src: `../${img.attr('src')}`, alt: img.attr('alt') });
 
   const shiftLbImg = (isRightDir) => {
     const currImg = lbImg.attr('src').substr(3);
@@ -32,29 +29,27 @@ $(function () {
 
   $('.close-btn').click(hideLightbox);
 
-  $('.lightbox-container').click(function (e) {
-    if ($(e.target).hasClass('lightbox-container')) hideLightbox();
+  $('.lightbox').click(function (e) {
+    if ($(e.target).hasClass('lightbox')) hideLightbox();
   });
 
   galleryItem.click(function () {
     if (window.matchMedia('(min-width: 991px)').matches) {
       setLbImg($(this).find('>:first-child'));
-      lbWrapper.fadeIn();
+      lbContainer.fadeIn();
       $('html').css('overflow-y', 'hidden');
     }
   });
 
-  $(document).keydown(function (e) {
-    const isArrowKeyPressed = e.which === 39 || e.which === 37;
-    if (lbWrapper.css('display') === 'block' && isArrowKeyPressed)
-      shiftLbImg(e.which === 39);
+  $('.arrow-btn').click(function (e) {
+    const isNextBtnPressed = $(e.target).hasClass('next-btn' || 'icofont-thin-right');
+    shiftLbImg(isNextBtnPressed);
   });
 
-  $('.arrow-btn').click(function (e) {
-    const isNextBtnPressed = $(e.target).hasClass(
-      'next-btn' || 'icofont-thin-right'
-    );
-    shiftLbImg(isNextBtnPressed);
+  $(document).keydown(function (e) {
+    const isArrowKeyPressed = e.which === 39 || e.which === 37;
+    if (isArrowKeyPressed && lbContainer.css('display') === 'block')
+      shiftLbImg(e.which === 39);
   });
 
   hideLightbox();

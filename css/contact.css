@@ -1,4 +1,4 @@
-.tilting-image {
+.tilting-img {
   background-image: url('../images/yard-3.jpg');
 }
 
@@ -7,19 +7,18 @@
   color: var(--green);
 }
 
-.contact-box a {
-  line-height: 28px;
-}
-
 .contact-box h3 {
   margin-top: 36px;
   text-transform: uppercase;
 }
 
+.contact-box a {
+  line-height: 28px;
+}
+
 #map iframe {
   height: 500px;
   margin-bottom: -3px;
-  border: 0;
 }
 
 @media all and (max-width: 768px) {

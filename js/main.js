@@ -1,11 +1,11 @@
 $(function () {
   $('#loading').fadeOut(300);
 
+  const topBar = $('.top-bar');
   const menu = $('#menu');
   const menuIcon = $('#menu-icon');
-  const menuLogo = $('.menu-center .logo').first();
-  const topBar = $('.top-bar');
-  const nav = $('nav').first();
+  const menuLogo = $('.menu-center .logo');
+  const nav = $('nav');
   const scrollTop = $('#scroll-top');
   const wrapper = $('#wrapper');
   let prevSt = 0;
@@ -20,7 +20,7 @@ $(function () {
     wrapper.toggleClass('blur');
   };
 
-  // in case you test using the browser developer tools and resize the window from there :3
+  // in case you test using the browser developer tools and resize the window :3
   const toggleMenuOnResize = () => {
     if (isScreenLg()) {
       menu.css('margin-right', 0);
@@ -37,6 +37,9 @@ $(function () {
   };
 
   const toggleNavOnScroll = () => {
+    const logoWhiteSrc = '../images/logos/logo-white.png';
+    const logoBlackSrc = '../images/logos/logo.png';
+
     if (isScreenLg()) {
       let st = $(this).scrollTop();
       if (st <= 0 || st > prevSt) {
@@ -45,12 +48,12 @@ $(function () {
           nav.addClass('hidden');
           topBar.addClass('hidden');
         } else if (st == 0) topBar.removeClass('hidden');
-        if (nav.hasClass('transparent'))
-          menuLogo.attr('src', '../images/logos/logo-white.png');
+        if (nav.hasClass('transparent')) 
+          menuLogo.attr('src', logoWhiteSrc);
       } else {
         nav.removeClass('hidden').addClass('sticky');
-        if (nav.hasClass('transparent'))
-          menuLogo.attr('src', '../images/logos/logo.png');
+        if (nav.hasClass('transparent')) 
+          menuLogo.attr('src', logoBlackSrc);
       }
       prevSt = st;
     }
@@ -69,8 +72,8 @@ $(function () {
     once: true,
   });
 
-  if ($('.tilting-image').length)
-    $('.tilting-image').tilt({
+  if ($('.tilting-img').length)
+    $('.tilting-img').tilt({
       maxTilt: 10,
     });
 });

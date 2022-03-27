@@ -1,4 +1,4 @@
-.tilting-image {
+.tilting-img {
   background-image: url('../images/yard.jpg');
 }
 
@@ -10,9 +10,8 @@
 fieldset {
   min-width: 0;
   padding: 0;
-  margin: 0;
   border: 0;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 
 input, textarea {
@@ -50,7 +49,7 @@ label .asterisk {
 }
 
 #submit-btn:disabled {
-  cursor: not-allowed
+  cursor: not-allowed;
 }
 
 #submit-message {

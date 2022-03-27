@@ -10,14 +10,8 @@ $(function () {
 
   // form handler using google scripts
   // guide: https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server
-  const inputs = $('form input');
-  const submitBtn = $('#submit-btn');
-  const submitMess = $('#submit-message');
-
-  const formatDate = (date) => date.split('-').reverse().join('/');
-
   const getFormData = (form) => {
-    const elements = form.elements;
+    const { elements } = form;
     const fields = Object.keys(elements)
       .map((k) =>
         elements[k].name !== undefined
@@ -35,8 +29,10 @@ $(function () {
     };
 
     fields.forEach((name) => {
-      const val = elements[name].value;
-      formData[name] = name.includes('check') ? formatDate(val) : val;
+      const { value } = elements[name];
+      formData[name] = name.includes('check')
+        ? value.split('-').reverse().join('/')
+        : value;
     });
 
     return formData;
@@ -44,7 +40,7 @@ $(function () {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    submitBtn.prop('disabled', true).css('cursor', 'not-allowed');
+    $('#submit-btn').prop('disabled', true).css('cursor', 'not-allowed');
 
     const form = e.target;
     const url = form.action;
@@ -60,7 +56,7 @@ $(function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         form.reset();
         $('form').fadeOut();
-        submitMess.fadeIn();
+        $('#submit-message').fadeIn();
         $('.section-heading').addClass('less-mb');
         $('h2').text('Mesajul a fost trimis cu succes!');
         $('.subheading').text('Formular trimis');
@@ -68,6 +64,8 @@ $(function () {
     };
     xhr.send(encoded);
   };
+
+  const inputs = $('form input');
 
   const isInputValid = (element) => {
     if (element.id === 'telefon')
@@ -89,8 +87,8 @@ $(function () {
   const changeInputsBorderColor = () =>
     inputs.each((i) => changeInputBorderColor(inputs.eq(i)[0]));
 
-  submitMess.hide();
+  $('#submit-message').hide();
   inputs.on('keydown input focus', (e) => changeInputBorderColor(e.target));
-  submitBtn.click(changeInputsBorderColor);
+  $('#submit-btn').click(changeInputsBorderColor);
   $('form').submit(handleFormSubmit);
 });

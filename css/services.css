@@ -1,4 +1,4 @@
-.tilting-image {
+.tilting-img {
   background-image: url('../images/yard-2.jpg');
 }
 
@@ -17,13 +17,10 @@
 }
 
 /* menu section */
-ul {
+#nav-tabs {
   list-style-type: none;
   padding-left: 0;
   margin: 0 auto;
-} 
-
-#nav-tabs {
   display: flex;
   width: fit-content;
   justify-content: center;
@@ -117,14 +114,15 @@ ul {
   margin-bottom: 0;
 }
 
+/* media queries */
 @media all and (max-width: 991px) {
+  #tabs {
+    margin-top: 2rem;
+  }
+
   .meal:last-child:not(.no-border) {
     padding-bottom: 24px;
     border-bottom: 1px solid var(--light-gray);
-  }
-
-  #tabs {
-    margin-top: 2rem;
   }
 
   .activity-box {

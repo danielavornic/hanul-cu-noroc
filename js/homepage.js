@@ -9,15 +9,15 @@ $(function () {
 
     setTimeout(() => {
       $('.slide:last').after($('.slide:first'));
-      slider.removeClass('slide-transition').css('transform', 'translateX(0px)');
+      slider
+        .removeClass('slide-transition')
+        .css('transform', 'translateX(0px)');
     }, 700);
   };
 
   const initSlider = () => {
-    const leftPos = slideWidth - slideWidth * 0.3;
-
     if (window.matchMedia('(min-width: 991px)').matches) {
-      slider.css('left', `-${leftPos}px`);
+      slider.css('left', `-${slideWidth * 0.7}px`);
     } else {
       slider.css('left', '0');
       clearInterval(startSlider);
