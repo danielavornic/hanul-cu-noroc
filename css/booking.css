@@ -31,9 +31,8 @@ input:focus, textarea:focus {
   outline: none;
 }
 
-input:focus {
+input.invalid {
   border: 1px solid red;
-  outline: none;
 }
 
 label {
@@ -48,6 +47,10 @@ label .asterisk {
 #submit-btn {
   width: 100%;
   cursor: pointer;
+}
+
+#submit-btn:disabled {
+  cursor: not-allowed
 }
 
 #submit-message {
