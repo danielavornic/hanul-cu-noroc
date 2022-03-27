@@ -212,7 +212,7 @@ p {
   background-size: 200%;
 }
 
-.btn-green-transparent:hover {
+.btn-green-transparent:not(:disabled):hover {
   background-position: left;
 	color: white;
 }
